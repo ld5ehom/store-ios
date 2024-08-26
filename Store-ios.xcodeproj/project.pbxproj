@@ -15,7 +15,7 @@
 		AB5613B22C7C15F6002B6B4B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AB5613B12C7C15F6002B6B4B /* Base */; };
 		AB5613BC2C7C16CF002B6B4B /* Help.md in Resources */ = {isa = PBXBuildFile; fileRef = AB5613BB2C7C16CF002B6B4B /* Help.md */; };
 		AB5613BE2C7C1724002B6B4B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AB5613BD2C7C1724002B6B4B /* README.md */; };
-		AB5613C02C7C174D002B6B4B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AB5613BF2C7C174D002B6B4B /* .gitignore */; };
+		ABAD8F0F2C7C4EA400BE993A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = ABAD8F0E2C7C4EA400BE993A /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		AB5613B32C7C15F6002B6B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB5613BB2C7C16CF002B6B4B /* Help.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Help.md; sourceTree = "<group>"; };
 		AB5613BD2C7C1724002B6B4B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		AB5613BF2C7C174D002B6B4B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		ABAD8F0E2C7C4EA400BE993A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,9 +46,9 @@
 		AB5613992C7C15F5002B6B4B = {
 			isa = PBXGroup;
 			children = (
+				ABAD8F0E2C7C4EA400BE993A /* .gitignore */,
 				AB5613BD2C7C1724002B6B4B /* README.md */,
 				AB5613BB2C7C16CF002B6B4B /* Help.md */,
-				AB5613BF2C7C174D002B6B4B /* .gitignore */,
 				AB5613A42C7C15F5002B6B4B /* Store-ios */,
 				AB5613A32C7C15F5002B6B4B /* Products */,
 			);
@@ -138,7 +138,7 @@
 				AB5613B22C7C15F6002B6B4B /* Base in Resources */,
 				AB5613BE2C7C1724002B6B4B /* README.md in Resources */,
 				AB5613AD2C7C15F5002B6B4B /* Base in Resources */,
-				AB5613C02C7C174D002B6B4B /* .gitignore in Resources */,
+				ABAD8F0F2C7C4EA400BE993A /* .gitignore in Resources */,
 				AB5613BC2C7C16CF002B6B4B /* Help.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

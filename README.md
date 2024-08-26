@@ -9,9 +9,9 @@
 
 
 ## Milestones
-- M1: App Basic Functionality Development
-- M2: AWS Backend Server Development
-- M3: Advanced Features and Testing
+- M1 : App Basic Functionality Development
+- M2 : AWS Backend Server Development
+- M3 : Advanced Features and Testing
 
 -----
 
@@ -22,6 +22,7 @@
    - **Issues** : [task-1-launch](https://github.com/ld5ehom/store-ios/tree/task-1-launch)
    - **Details** : 
    - Design and implement the initial launch screen layout with branding elements and smooth transition into the app.
+
 
 **Task 2. Login Page**
    - **Details** : 
@@ -49,6 +50,7 @@
 
 
 ### M2: AWS Backend Server Development
+
 **Task 7. Cognito-based Login and Logout Functionality **
    - **Details**: 
    - Implement user authentication and authorization using Amazon Cognito.

@@ -1,0 +1,10 @@
+Help.md
+.DS_Store
+.DS_Store/
+xcuserdata/
+build/
+.idea/
+
+Pods/
+Podfile
+Podfile.lock

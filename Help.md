@@ -61,6 +61,11 @@ git rm -r --cached Pods
 git rm -r --cached Podfile Podfile.lock Messenger-ios.xcodeproj Messenger-ios.xcworkspace
 
 
+##깃 커밋 
+git commit -m "feat: 프로젝트 초기 설정 및 런칭 준비" -m "- Xcode 프로젝트 초기화 및 설정
+- 필수 의존성 설치 및 셋업 완료
+- 기본 앱 구조 및 폴더 구조 설정
+- 초기 테스트 대상 파일 추가"
 
 
 
