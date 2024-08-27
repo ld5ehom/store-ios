@@ -20,8 +20,8 @@
 
 **Task 1. Launch Screen**
    - **Issues** : [task-1-launch](https://github.com/ld5ehom/store-ios/tree/task-1-launch)
-   - **Details** : 
-   - Design and implement the initial launch screen layout with branding elements and smooth transition into the app.
+   - **Details**
+     - **Launch Screen** : Implemented animation using Auto Layout
 
 
 **Task 2. Login Page**
@@ -51,7 +51,7 @@
 
 ### M2: AWS Backend Server Development
 
-**Task 7. Cognito-based Login and Logout Functionality **
+**Task 7. Cognito-based Login and Logout Functionality**
    - **Details**: 
    - Implement user authentication and authorization using Amazon Cognito.
    - Set up user pools and identity pools for handling user registration, login, and logout.
@@ -59,14 +59,14 @@
 
 
 
-**Task 8. Product Registration via S3 **
+**Task 8. Product Registration via S3**
    - **Details**: 
    - Use Amazon S3 to handle product image uploads and storage.
    - Implement APIs to manage product information and associate images with products.
    - Ensure proper permissions and access controls for the S3 bucket.
 
 
-**Task 9. Purchase History Functionality with DynamoDB **
+**Task 9. Purchase History Functionality with DynamoDB**
    - **Details**: 
    - Use Amazon DynamoDB to store and retrieve purchase history data.
    - Design a schema for tracking user transactions and purchase details.
@@ -74,7 +74,7 @@
 
 
 
-**Task 10. Search Functionality using OpenSearch **
+**Task 10. Search Functionality using OpenSearch**
    - **Details**: 
    - Integrate Amazon OpenSearch (formerly Elasticsearch) for advanced search capabilities.
    - Set up indexing and search queries to enable efficient product searches.
