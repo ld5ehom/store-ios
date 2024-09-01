@@ -23,7 +23,7 @@ cd /Users/teo/Desktop/Store-ios
 git branch
 
 ## 새 브랜치 생성 및 체크아웃
-git checkout -b task-1-launch
+git checkout -b task-2-login
 
 ##브랜치 전환
 git checkout task-1-launch

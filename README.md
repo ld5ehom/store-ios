@@ -5,7 +5,7 @@
 - Separated views from view controllers by avoiding Storyboards, using programmatic UI layout.
 - Integrated WKWebView for the checkout screen, enabling web-based payment processing. 
 - Automated builds using Xcode Cloud for CI/CD, and utilized Fastlane for build automation and GitHub Actions for build verification and testing.
-- Utilized: Swift, SwiftUI, UIKit, MVVM, Firebase
+- Utilized: Swift, UIKit, MVI, Firebase
 
 
 ## Milestones
@@ -20,18 +20,20 @@
 
 **Task 1. Launch Screen**
    - **Issues** : [task-1-launch](https://github.com/ld5ehom/store-ios/tree/task-1-launch)
-   - **Details**
-     - **Launch Screen** : Implemented animation using Auto Layout
+   - **Details** :
+     - **Launch Screen** - [commit b774cf7](https://github.com/ld5ehom/store-ios/commit/b774cf74c6e510a0e9d0da6b6ca166f4c2e25eae) :
+       - Implemented animation using Auto Layout
 
 
 **Task 2. Login Page**
+   - **Issues** : [task-2-login](https://github.com/ld5ehom/store-ios/tree/task-2-login)
    - **Details** : 
-   - Updated the login UI view and implemented user authentication with Firebase using Google sign-in for both account creation and login, along with secure registration features and logout functionality.
 
 
 **Task 3. Home Page**
+   - **Issues** : [task-3-home](https://github.com/ld5ehom/store-ios/tree/task-3-home)
    - **Details** : 
-   - Design and develop the home view layout to display featured products, categories, and promotions with dynamic content from the backend.
+     - **Home View UI** : 
 
 
 **Task 4. Cart Page**
@@ -101,7 +103,7 @@
 -----
 ## Progress Tracking
 
-- **Overall Progress** : Project Plan Design in Progress 
+- **Overall Progress** : Task 2 In Progress
 
 
 -----
@@ -127,6 +129,12 @@ git clone https://github.com/ld5ehom/store-ios.git
 ```
 pod install
 ```
+
+**AWS Amplify**:
+```
+https://github.com/aws-amplify/amplify-ios
+```
+
 
 **IntelliJ IDEA**:
 ```

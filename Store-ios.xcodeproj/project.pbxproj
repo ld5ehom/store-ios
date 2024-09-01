@@ -19,6 +19,9 @@
 		ABAD8F112C7C58D100BE993A /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAD8F102C7C58D100BE993A /* Splash.storyboard */; };
 		ABAD8F132C7C594C00BE993A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAD8F122C7C594C00BE993A /* SplashViewController.swift */; };
 		ABAD8F152C7C697200BE993A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAD8F142C7C697200BE993A /* Colors.xcassets */; };
+		ABC890422C805A7C008A90BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABC890412C805A7C008A90BE /* GoogleService-Info.plist */; };
+		ABC890452C805AED008A90BE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ABC890442C805AED008A90BE /* FirebaseAuth */; };
+		ABC890482C8072AC008A90BE /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = ABC890472C8072AC008A90BE /* AWSCognitoAuthPlugin */; };
 		ABCADCE52C7DA46400B0318F /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = ABCADCE42C7DA46400B0318F /* DotLottie */; };
 		ABCADCEA2C7DB21500B0318F /* SFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCADCE92C7DB21500B0318F /* SFont.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +41,7 @@
 		ABAD8F102C7C58D100BE993A /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		ABAD8F122C7C594C00BE993A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		ABAD8F142C7C697200BE993A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		ABC890412C805A7C008A90BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABCADCE92C7DB21500B0318F /* SFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +51,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABCADCE52C7DA46400B0318F /* DotLottie in Frameworks */,
+				ABC890452C805AED008A90BE /* FirebaseAuth in Frameworks */,
+				ABC890482C8072AC008A90BE /* AWSCognitoAuthPlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,15 +81,16 @@
 		AB5613A42C7C15F5002B6B4B /* Store-ios */ = {
 			isa = PBXGroup;
 			children = (
-				ABCADCE62C7DAB0D00B0318F /* DesignSource */,
 				AB5613A52C7C15F5002B6B4B /* AppDelegate.swift */,
 				AB5613A72C7C15F5002B6B4B /* SceneDelegate.swift */,
 				AB5613A92C7C15F5002B6B4B /* ViewController.swift */,
 				AB5613AB2C7C15F5002B6B4B /* Main.storyboard */,
 				AB5613B02C7C15F6002B6B4B /* LaunchScreen.storyboard */,
 				AB5613B32C7C15F6002B6B4B /* Info.plist */,
+				ABC890412C805A7C008A90BE /* GoogleService-Info.plist */,
 				ABAD8F102C7C58D100BE993A /* Splash.storyboard */,
 				ABAD8F122C7C594C00BE993A /* SplashViewController.swift */,
+				ABCADCE62C7DAB0D00B0318F /* DesignSource */,
 			);
 			path = "Store-ios";
 			sourceTree = "<group>";
@@ -116,6 +123,8 @@
 			name = "Store-ios";
 			packageProductDependencies = (
 				ABCADCE42C7DA46400B0318F /* DotLottie */,
+				ABC890442C805AED008A90BE /* FirebaseAuth */,
+				ABC890472C8072AC008A90BE /* AWSCognitoAuthPlugin */,
 			);
 			productName = "store-ios";
 			productReference = AB5613A22C7C15F5002B6B4B /* Store-ios.app */;
@@ -147,6 +156,8 @@
 			mainGroup = AB5613992C7C15F5002B6B4B;
 			packageReferences = (
 				ABCADCE32C7DA46400B0318F /* XCRemoteSwiftPackageReference "dotlottie-ios" */,
+				ABC890432C805AED008A90BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				ABC890462C8072AB008A90BE /* XCRemoteSwiftPackageReference "amplify-ios" */,
 			);
 			productRefGroup = AB5613A32C7C15F5002B6B4B /* Products */;
 			projectDirPath = "";
@@ -164,6 +175,7 @@
 			files = (
 				AB5613AF2C7C15F6002B6B4B /* Assets.xcassets in Resources */,
 				AB5613B22C7C15F6002B6B4B /* Base in Resources */,
+				ABC890422C805A7C008A90BE /* GoogleService-Info.plist in Resources */,
 				AB5613BE2C7C1724002B6B4B /* README.md in Resources */,
 				AB5613AD2C7C15F5002B6B4B /* Base in Resources */,
 				ABAD8F0F2C7C4EA400BE993A /* .gitignore in Resources */,
@@ -411,6 +423,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		ABC890432C805AED008A90BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
+			};
+		};
+		ABC890462C8072AB008A90BE /* XCRemoteSwiftPackageReference "amplify-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/amplify-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.39.0;
+			};
+		};
 		ABCADCE32C7DA46400B0318F /* XCRemoteSwiftPackageReference "dotlottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/LottieFiles/dotlottie-ios.git";
@@ -422,6 +450,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		ABC890442C805AED008A90BE /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABC890432C805AED008A90BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		ABC890472C8072AC008A90BE /* AWSCognitoAuthPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABC890462C8072AB008A90BE /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSCognitoAuthPlugin;
+		};
 		ABCADCE42C7DA46400B0318F /* DotLottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ABCADCE32C7DA46400B0318F /* XCRemoteSwiftPackageReference "dotlottie-ios" */;
