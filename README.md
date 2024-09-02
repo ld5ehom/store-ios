@@ -33,8 +33,11 @@
 **Task 3. Home Page**
    - **Issues** : [task-3-home](https://github.com/ld5ehom/store-ios/tree/task-3-home)
    - **Details** : 
-     - **Design Source** : 
-       - Integrated design resources into the DesignSource file by componentizing them for the implementation of the home screen banner.
+     - **Design Source** - [commit ed458db](https://github.com/ld5ehom/store-ios/commit/ed458db26503679913cc01fe2dd596cb07bf8200) : 
+       - Integrated design resources into the DesignSource folder by componentizing them for the implementation of the home screen banner.
+     - **Set HomeViewController as Root View** :
+       - Instead of presenting HomeViewController modally after the loading animation finishes, the root view controller has been changed to HomeViewController, making it the initial screen displayed.
+
 
 **Task 4. Cart Page**
    - **Details** : 
