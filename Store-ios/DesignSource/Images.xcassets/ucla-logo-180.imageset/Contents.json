@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ucla-logo-180.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

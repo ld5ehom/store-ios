@@ -23,10 +23,10 @@ cd /Users/teo/Desktop/Store-ios
 git branch
 
 ## 새 브랜치 생성 및 체크아웃
-git checkout -b task-2-login
+git checkout -b task-3-home
 
 ##브랜치 전환
-git checkout task-1-launch
+git checkout task-3-home
 
 ##브랜치 2로 전환
 git checkout branch2
@@ -37,6 +37,14 @@ git pull
 
 ##브랜치1의 변경 사항을 브랜치2로 병합 (branch2로 전환 이후)
 git merge branch1
+
+## 현재 브랜치 이름을 task-3-home 으로 변경
+git branch -m task-3-home
+
+##원격 저장소에 이미 푸시한 경우에는 새로운 이름으로 브랜치를 푸시하고, 잘못된 브랜치를 삭제해야 합니다.
+git push origin -u task-3-home
+git push origin --delete task-2-home
+
 
 
 
