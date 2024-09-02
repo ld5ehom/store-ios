@@ -26,23 +26,13 @@ class SplashViewController: UIViewController {
     // After Load
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
-        // X locate
-//        appIconCenterXConstraint.constant = -(view.frame.width / 2) - (appIcon.frame.width / 2)
         
-        // Y locate
-//        appIconCenterYConstraint.constant = -(view.frame.height / 2) - (appIcon.frame.height / 2)
-        
-        // UI Animation move
-//        UIView.animate(withDuration: 1) { [weak self] in
-//            self?.view.layoutIfNeeded()
-//        }
-        
-        // rotate
-//        UIView.animate(withDuration: 1, animations: { [weak self] in
-//            let rotationAngle: CGFloat = CGFloat.pi
-//            self?.appIcon.transform = CGAffineTransform(rotationAngle: rotationAngle)
-//        })
+        /*
+        // lottie
+        lottieAnimationView.play { _ in
+            present(HomeViewController(), animated: true)
+        }
+        */
         
         // Zoom in animation
         UIView.animate(withDuration: 0.7, animations: { [weak self] in
@@ -50,13 +40,14 @@ class SplashViewController: UIViewController {
             self?.appIcon.transform = CGAffineTransform(scaleX: 10, y: 10)
             // Optional: Fade in effect
             self?.appIcon.alpha = 0.0
-        }) // { _ in
-//            // Optional: Reset after animation
-//            UIView.animate(withDuration: 0.5) { [weak self] in
-//                self?.appIcon.transform = CGAffineTransform.identity
-//            }
-//        }
-
+        }, completion: { _ in
+            
+            // Switch the root view to HomeViewController
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let window = windowScene.windows.first(where: { $0.isKeyWindow }) {
+                window.rootViewController = HomeViewController()
+            }
+        })
 
     }
 }
