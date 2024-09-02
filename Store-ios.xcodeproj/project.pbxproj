@@ -22,6 +22,7 @@
 		ABAD8F152C7C697200BE993A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAD8F142C7C697200BE993A /* Colors.xcassets */; };
 		ABB02CC12C85520C00E4890D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB02CC02C85520C00E4890D /* Home.storyboard */; };
 		ABB02CC32C85529F00E4890D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB02CC22C85529F00E4890D /* HomeViewController.swift */; };
+		ABB02CC92C85904D00E4890D /* HomeBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB02CC82C85904D00E4890D /* HomeBannerCollectionViewCell.swift */; };
 		ABC890422C805A7C008A90BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABC890412C805A7C008A90BE /* GoogleService-Info.plist */; };
 		ABC890452C805AED008A90BE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ABC890442C805AED008A90BE /* FirebaseAuth */; };
 		ABC890482C8072AC008A90BE /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = ABC890472C8072AC008A90BE /* AWSCognitoAuthPlugin */; };
@@ -47,6 +48,7 @@
 		ABAD8F142C7C697200BE993A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		ABB02CC02C85520C00E4890D /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		ABB02CC22C85529F00E4890D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		ABB02CC82C85904D00E4890D /* HomeBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		ABC890412C805A7C008A90BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABCADCE92C7DB21500B0318F /* SFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,18 +89,51 @@
 		AB5613A42C7C15F5002B6B4B /* Store-ios */ = {
 			isa = PBXGroup;
 			children = (
+				ABB02CC72C85792800E4890D /* Delegate */,
 				ABCADCE62C7DAB0D00B0318F /* DesignSource */,
-				AB5613A52C7C15F5002B6B4B /* AppDelegate.swift */,
-				AB5613A72C7C15F5002B6B4B /* SceneDelegate.swift */,
-				AB5613B02C7C15F6002B6B4B /* LaunchScreen.storyboard */,
+				ABB02CC42C8573D600E4890D /* Feature */,
 				AB5613B32C7C15F6002B6B4B /* Info.plist */,
 				ABC890412C805A7C008A90BE /* GoogleService-Info.plist */,
-				ABAD8F102C7C58D100BE993A /* Splash.storyboard */,
-				ABAD8F122C7C594C00BE993A /* SplashViewController.swift */,
-				ABB02CC02C85520C00E4890D /* Home.storyboard */,
-				ABB02CC22C85529F00E4890D /* HomeViewController.swift */,
 			);
 			path = "Store-ios";
+			sourceTree = "<group>";
+		};
+		ABB02CC42C8573D600E4890D /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				ABB02CC52C8573E100E4890D /* Splash */,
+				ABB02CC62C8573EC00E4890D /* Home */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		ABB02CC52C8573E100E4890D /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				AB5613B02C7C15F6002B6B4B /* LaunchScreen.storyboard */,
+				ABAD8F102C7C58D100BE993A /* Splash.storyboard */,
+				ABAD8F122C7C594C00BE993A /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		ABB02CC62C8573EC00E4890D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ABB02CC02C85520C00E4890D /* Home.storyboard */,
+				ABB02CC22C85529F00E4890D /* HomeViewController.swift */,
+				ABB02CC82C85904D00E4890D /* HomeBannerCollectionViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ABB02CC72C85792800E4890D /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				AB5613A52C7C15F5002B6B4B /* AppDelegate.swift */,
+				AB5613A72C7C15F5002B6B4B /* SceneDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		ABCADCE62C7DAB0D00B0318F /* DesignSource */ = {
@@ -209,6 +244,7 @@
 				AB5613A82C7C15F5002B6B4B /* SceneDelegate.swift in Sources */,
 				ABAD8F132C7C594C00BE993A /* SplashViewController.swift in Sources */,
 				AB6D62FD2C845E6C00D22A6F /* SImage.swift in Sources */,
+				ABB02CC92C85904D00E4890D /* HomeBannerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
