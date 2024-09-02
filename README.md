@@ -48,9 +48,12 @@
      - **Home Banner Slide** - [commit 04647e9](https://github.com/ld5ehom/store-ios/commit/04647e90727f0b0f90285999675564785adb7b12) : 
        - The Home storyboard view controller wasn't connected, so the storyboard was loaded to properly use the Home view controller.
        - Using a compositional layout and diffable data source to efficiently manage and display collection view items. 
-     - **Home Screen Scroll Component** : 
-       - Implemented a horizontal scroll component for the Home screen by configuring each cell to display product details, including images, titles, and prices. The cells are designed to show product images, titles, and prices, with the original price having a strikethrough effect to indicate discounts.
-
+     - **Home Screen Horizontal Product Carousel** - [commit 9f83a10](https://github.com/ld5ehom/store-ios/commit/9f83a10c80d0499c1b372c3f65d21044920bffef) :  
+       - Implemented a horizontal carousel component for the Home screen, where each cell displays product details such as images, titles, and prices. The carousel allows users to scroll through products horizontally. Each cell features a product image, title, and price, with the original price displayed with a strikethrough effect to highlight discounts.
+     - **Home Screen Vertical Product Carousel** :  
+       - 
+       
+       
 
 **Task 4. Cart Page**
    - **Details** : 
