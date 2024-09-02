@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "angle-down-solid.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

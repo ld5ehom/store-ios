@@ -5,7 +5,6 @@
 //  Created by TaeWook Park on 8/25/24.
 //
 
-//import Lottie
 import UIKit
 
 class SplashViewController: UIViewController {
@@ -46,7 +45,7 @@ class SplashViewController: UIViewController {
 //        })
         
         // Zoom in animation
-        UIView.animate(withDuration: 1.5, animations: { [weak self] in
+        UIView.animate(withDuration: 0.7, animations: { [weak self] in
             // Scale transformation (increase the size)
             self?.appIcon.transform = CGAffineTransform(scaleX: 10, y: 10)
             // Optional: Fade in effect

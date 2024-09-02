@@ -27,14 +27,14 @@
 
 **Task 2. Login Page**
    - **Issues** : [task-2-login](https://github.com/ld5ehom/store-ios/tree/task-2-login)
-   - **Details** : 
+   - **Details**  
 
 
 **Task 3. Home Page**
    - **Issues** : [task-3-home](https://github.com/ld5ehom/store-ios/tree/task-3-home)
    - **Details** : 
-     - **Home View UI** : 
-
+     - **Design Source** : 
+       - Integrated design resources into the DesignSource file by componentizing them for the implementation of the home screen banner.
 
 **Task 4. Cart Page**
    - **Details** : 
@@ -103,7 +103,7 @@
 -----
 ## Progress Tracking
 
-- **Overall Progress** : Task 2 In Progress
+- **Overall Progress** : Task 3 In Progress
 
 
 -----

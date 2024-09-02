@@ -15,6 +15,9 @@
 		AB5613B22C7C15F6002B6B4B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AB5613B12C7C15F6002B6B4B /* Base */; };
 		AB5613BC2C7C16CF002B6B4B /* Help.md in Resources */ = {isa = PBXBuildFile; fileRef = AB5613BB2C7C16CF002B6B4B /* Help.md */; };
 		AB5613BE2C7C1724002B6B4B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AB5613BD2C7C1724002B6B4B /* README.md */; };
+		AB6D62F92C844C2E00D22A6F /* SColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D62F82C844C2E00D22A6F /* SColor.swift */; };
+		AB6D62FB2C844CB400D22A6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6D62FA2C844CB400D22A6F /* Images.xcassets */; };
+		AB6D62FD2C845E6C00D22A6F /* SImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D62FC2C845E6C00D22A6F /* SImage.swift */; };
 		ABAD8F0F2C7C4EA400BE993A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = ABAD8F0E2C7C4EA400BE993A /* .gitignore */; };
 		ABAD8F112C7C58D100BE993A /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAD8F102C7C58D100BE993A /* Splash.storyboard */; };
 		ABAD8F132C7C594C00BE993A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAD8F122C7C594C00BE993A /* SplashViewController.swift */; };
@@ -37,6 +40,9 @@
 		AB5613B32C7C15F6002B6B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB5613BB2C7C16CF002B6B4B /* Help.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Help.md; sourceTree = "<group>"; };
 		AB5613BD2C7C1724002B6B4B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AB6D62F82C844C2E00D22A6F /* SColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SColor.swift; sourceTree = "<group>"; };
+		AB6D62FA2C844CB400D22A6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AB6D62FC2C845E6C00D22A6F /* SImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SImage.swift; sourceTree = "<group>"; };
 		ABAD8F0E2C7C4EA400BE993A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		ABAD8F102C7C58D100BE993A /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		ABAD8F122C7C594C00BE993A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +106,10 @@
 			children = (
 				AB5613AE2C7C15F6002B6B4B /* Assets.xcassets */,
 				ABAD8F142C7C697200BE993A /* Colors.xcassets */,
+				AB6D62FA2C844CB400D22A6F /* Images.xcassets */,
 				ABCADCE92C7DB21500B0318F /* SFont.swift */,
+				AB6D62F82C844C2E00D22A6F /* SColor.swift */,
+				AB6D62FC2C845E6C00D22A6F /* SImage.swift */,
 			);
 			path = DesignSource;
 			sourceTree = "<group>";
@@ -174,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB5613AF2C7C15F6002B6B4B /* Assets.xcassets in Resources */,
+				AB6D62FB2C844CB400D22A6F /* Images.xcassets in Resources */,
 				AB5613B22C7C15F6002B6B4B /* Base in Resources */,
 				ABC890422C805A7C008A90BE /* GoogleService-Info.plist in Resources */,
 				AB5613BE2C7C1724002B6B4B /* README.md in Resources */,
@@ -195,8 +205,10 @@
 				AB5613AA2C7C15F5002B6B4B /* ViewController.swift in Sources */,
 				ABCADCEA2C7DB21500B0318F /* SFont.swift in Sources */,
 				AB5613A62C7C15F5002B6B4B /* AppDelegate.swift in Sources */,
+				AB6D62F92C844C2E00D22A6F /* SColor.swift in Sources */,
 				AB5613A82C7C15F5002B6B4B /* SceneDelegate.swift in Sources */,
 				ABAD8F132C7C594C00BE993A /* SplashViewController.swift in Sources */,
+				AB6D62FD2C845E6C00D22A6F /* SImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
