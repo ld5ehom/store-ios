@@ -23,9 +23,9 @@ enum SImage {
     static var cartOff: UIImage = UIImage(resource: .trash)
     
     // banners
-//    static var slide1: UIImage = UIImage(resource: .xmark)
-//    static var slide2: UIImage = UIImage(resource: .xmark)
-//    static var slide3: UIImage = UIImage(resource: .xmark)
+    static var slide1: UIImage = UIImage(resource: .slide1)
+    static var slide2: UIImage = UIImage(resource: .slide2)
+    static var slide3: UIImage = UIImage(resource: .slide3)
     
     // categories
     static var categoryBags: UIImage = UIImage(resource: .bag)

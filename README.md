@@ -35,8 +35,11 @@
    - **Details** : 
      - **Design Source** - [commit ed458db](https://github.com/ld5ehom/store-ios/commit/ed458db26503679913cc01fe2dd596cb07bf8200) : 
        - Integrated design resources into the DesignSource folder by componentizing them for the implementation of the home screen banner.
-     - **Set HomeViewController as Root View** :
+     - **Set HomeViewController as Root View** - [commit d6761db](https://github.com/ld5ehom/store-ios/commit/d6761dbbcf4aee785928696e346bb0e99680194e) :
        - Instead of presenting HomeViewController modally after the loading animation finishes, the root view controller has been changed to HomeViewController, making it the initial screen displayed.
+     - **Home Banner Slide** :
+       - The Home storyboard view controller wasn't connected, so the storyboard was loaded to use the Home view controller properly.
+       - Using compositional layout and diffable data source to efficiently manage and display collection view items 
 
 
 **Task 4. Cart Page**
