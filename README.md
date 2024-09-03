@@ -5,7 +5,7 @@
 - Separated views from view controllers by avoiding Storyboards, using programmatic UI layout.
 - Integrated WKWebView for the checkout screen, enabling web-based payment processing. 
 - Automated builds using Xcode Cloud for CI/CD, and utilized Fastlane for build automation and GitHub Actions for build verification and testing.
-- Utilized: Swift, UIKit, MVI, Firebase
+- Utilized: Swift, UIKit, MVI
 
 
 ## Project Overview - [Store Management System (AWS) for Store iOS App](https://github.com/ld5ehom/store)
@@ -53,10 +53,12 @@
      - **Home Screen Product Display Using Vertical Scroll** - [commit 98ae0a5](https://github.com/ld5ehom/store-ios/commit/98ae0a547030f1e15d807177fbb489d1ac7b3c0c) :  
        - Refactored Cell Layout Configuration: Moved the cell layout configuration from the view controller to the cell extension, resulting in cleaner code and improved modularity.
        - Implemented Vertical Scroll Layout: Created a product list for general items using a vertical scroll layout. This arrangement allows users to scroll through the list of products efficiently, organizing them vertically for better display and navigation. 
-     - **Home Screen Data Model Implementation** :  
+     - **Home Screen Data Model Implementation** - [commit 2ec3f9f](https://github.com/ld5ehom/store-ios/commit/2ec3f9f16e548292592e34252c31983755bb86ad) :   
        - Refactored the cell layout configuration by moving it from the view controller to the cell extension, resulting in cleaner code and improved modularity.
        - Implemented a set of data models to represent the JSON response structure for the Home screen, including models for banners, horizontal product listings, vertical product listings, and themed banners.
        - Fetched data for these models from a JSON file hosted on GitHub, which populates the Home screen content.
+     - **Kingfisher Library**:  
+       - Integrated the Kingfisher library to handle image downloading and caching. This allows for efficient image loading with caching mechanisms, reducing the need for repeated network requests and improving performance.
 
 
 
@@ -136,6 +138,7 @@
 ## Reference Site
 - Firebase Structure Data : https://firebase.google.com/docs/database/ios/structure-data?hl=en
 - Firebase Database Reference : https://firebase.google.com/docs/database/ios/lists-of-data?hl=en
+- Kingfisher Library : https://github.com/onevcat/Kingfisher.git
 - AWS Corretto: https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html
 - Spring initializr : https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.2.2&packaging=jar&jvmVersion=17&groupId=com.store&artifactId=backend&name=backend&description=TaeWook%20store%20project&packageName=com.store.backend&dependencies=lombok,web
 - Terraform : developer.hashicorp.com/terraform

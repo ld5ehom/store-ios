@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 // Home Product ViewModel
 struct HomeProductCollectionViewCellViewModel: Hashable {
@@ -29,8 +30,8 @@ class HomeProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var discountPriceLabel: UILabel!
     
     func setViewModel(_ viewModel: HomeProductCollectionViewCellViewModel) {
-        // Product url
-//        productItemImageView.image =
+        // kingfisher image url
+        productItemImageView.kf.setImage(with: URL(string: viewModel.imageUrlString))
         
         productTitleLabel.text = viewModel.title
         productReasonDiscountLabel.text = viewModel.reasonDiscountString
@@ -67,6 +68,9 @@ extension HomeProductCollectionViewCell {
         // section margin
         section.contentInsets = .init(top: 20, leading: 33, bottom: 0, trailing: 33)
         
+        // spacing
+        section.interGroupSpacing = 15
+        
         // Return the compositional layout for the collection view
         return section
     }
@@ -76,6 +80,9 @@ extension HomeProductCollectionViewCell {
         // Define the size for each item in the collection view
         let itemSize : NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/2), heightDimension: .estimated(277))
         let item: NSCollectionLayoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        // spacing
+        item.contentInsets = .init(top: 0, leading: 2.5, bottom: 0, trailing: 2.5)
         
         // Set the group size with a fixed width of 117 and an estimated height of 224
         let groupSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(277))
@@ -88,7 +95,7 @@ extension HomeProductCollectionViewCell {
         section.orthogonalScrollingBehavior = .none
         
         // section margin
-        section.contentInsets = .init(top: 20, leading: 19, bottom: 0, trailing: 19)
+        section.contentInsets = .init(top: 20, leading: 19 - 2.5, bottom: 0, trailing: 19 - 2.5)
         
         // Return the compositional layout for the collection view
         return section
