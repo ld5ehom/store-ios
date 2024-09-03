@@ -8,7 +8,7 @@
 import UIKit
 
 struct HomeBannerCollectionViewCellViewModel: Hashable {
-    let bannerImage: UIImage
+    let bannerImageUrl: String
 }
 
 // Banner slide
@@ -19,7 +19,7 @@ class HomeBannerCollectionViewCell: UICollectionViewCell {
     
     
     func setViewModel(_ viewModel: HomeBannerCollectionViewCellViewModel) {
-        imageView.image = viewModel.bannerImage
+//        imageView.image = viewModel.bannerImage
     }
     
 }

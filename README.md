@@ -45,16 +45,22 @@
        - Integrated design resources into the DesignSource folder by componentizing them for the implementation of the home screen banner.
      - **Set HomeViewController as Root View** - [commit d6761db](https://github.com/ld5ehom/store-ios/commit/d6761dbbcf4aee785928696e346bb0e99680194e) :
        - Instead of presenting HomeViewController modally after the loading animation finishes, the root view controller has been changed to HomeViewController, making it the initial screen displayed.
-     - **Home Banner Slide** - [commit 04647e9](https://github.com/ld5ehom/store-ios/commit/04647e90727f0b0f90285999675564785adb7b12) : 
+     - **Home Banner Carousel** - [commit 04647e9](https://github.com/ld5ehom/store-ios/commit/04647e90727f0b0f90285999675564785adb7b12) : 
        - The Home storyboard view controller wasn't connected, so the storyboard was loaded to properly use the Home view controller.
        - Using a compositional layout and diffable data source to efficiently manage and display collection view items. 
      - **Home Screen Recommended Products Using Horizontal Carousel** - [commit 9f83a10](https://github.com/ld5ehom/store-ios/commit/9f83a10c80d0499c1b372c3f65d21044920bffef) :  
        - Implemented a horizontal carousel component for the Home screen, where each cell displays product details such as images, titles, and prices. The carousel allows users to scroll through products horizontally. Each cell features a product image, title, and price, with the original price displayed with a strikethrough effect to highlight discounts.
-     - **Home Screen Product Display Using Vertical Scroll** : 
+     - **Home Screen Product Display Using Vertical Scroll** - [commit 98ae0a5](https://github.com/ld5ehom/store-ios/commit/98ae0a547030f1e15d807177fbb489d1ac7b3c0c) :  
        - Refactored Cell Layout Configuration: Moved the cell layout configuration from the view controller to the cell extension, resulting in cleaner code and improved modularity.
        - Implemented Vertical Scroll Layout: Created a product list for general items using a vertical scroll layout. This arrangement allows users to scroll through the list of products efficiently, organizing them vertically for better display and navigation. 
-       
-       
+     - **Home Screen Data Model Implementation** :  
+       - Refactored the cell layout configuration by moving it from the view controller to the cell extension, resulting in cleaner code and improved modularity.
+       - Implemented a set of data models to represent the JSON response structure for the Home screen, including models for banners, horizontal product listings, vertical product listings, and themed banners.
+       - Fetched data for these models from a JSON file hosted on GitHub, which populates the Home screen content.
+
+
+
+
 
 **Task 4. Cart Page**
    - **Details** : 

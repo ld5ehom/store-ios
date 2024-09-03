@@ -28,9 +28,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadData()
         setDataSource()
-        applySnapShot()
         
+        // API data
         collectionView.collectionViewLayout = compositionalLayout
     }
     
@@ -57,6 +58,42 @@ class HomeViewController: UIViewController {
         }
     }
     
+    // Asynchronously loads data from the API, maps the JSON response to view models for banners and products, and applies them to the collection view snapshot.
+    private func loadData() {
+        Task {
+            do {
+                let response = try await NetworkService.shared.getHomeData()
+                
+                let bannerViewModels = response.banners.map {
+                    HomeBannerCollectionViewCellViewModel(bannerImageUrl: $0.imageUrl)
+                }
+                
+                let horizontalProductViewModels = response.horizontalProducts.map {
+                    HomeProductCollectionViewCellViewModel(imageUrlString: $0.imageUrl,
+                                                           title: $0.title,
+                                                           reasonDiscountString: $0.discount,
+                                                           originalPrice: "\($0.originalPrice)",
+                                                           discountPrice: "\($0.discountPrice)")
+                }
+                
+                let verticalProductViewModels = response.verticalProducts.map {
+                    HomeProductCollectionViewCellViewModel(imageUrlString: $0.imageUrl,
+                                                           title: $0.title,
+                                                           reasonDiscountString: $0.discount,
+                                                           originalPrice: "\($0.originalPrice)",
+                                                           discountPrice: "\($0.discountPrice)")
+                }
+                
+                applySnapShot(bannerViewModels: bannerViewModels, 
+                              horizontalProductViewModels: horizontalProductViewModels,
+                              verticalProductViewModels: verticalProductViewModels)
+
+            } catch {
+                print("network error: \(error)")
+            }
+        }
+    }
+    
     private func setDataSource() {
         dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { [weak self] collectionView, indexPath, viewModel in
             
@@ -74,40 +111,28 @@ class HomeViewController: UIViewController {
         })
     }
     
-    private func applySnapShot() {
+    private func applySnapShot(bannerViewModels: [HomeBannerCollectionViewCellViewModel],
+                               horizontalProductViewModels: [HomeProductCollectionViewCellViewModel],
+                               verticalProductViewModels: [HomeProductCollectionViewCellViewModel]) {
         // Snapshot
         var snapShot: NSDiffableDataSourceSnapshot<Section, AnyHashable> = NSDiffableDataSourceSnapshot<Section, AnyHashable>()
+        
+        // Banner Section
         snapShot.appendSections([.banner])
+        snapShot.appendItems(bannerViewModels, toSection: .banner)
         
-        // Banner View Model
-        snapShot.appendItems([
-            HomeBannerCollectionViewCellViewModel(bannerImage: UIImage(resource: .slide1)),
-            HomeBannerCollectionViewCellViewModel(bannerImage: UIImage(resource: .slide2)),
-            HomeBannerCollectionViewCellViewModel(bannerImage: UIImage(resource: .slide3))],
-                             toSection: .banner)
-        
-        // Home Screen Recommended Products Using Horizontal Carousel
+        // Horizontal Product Section
         snapShot.appendSections([.horizontalProductItem])
-        snapShot.appendItems([
-            HomeProductCollectionViewCellViewModel(imageUrlString: "", title: "title1", reasonDiscountString: "Coupon Discount", originalPrice: "65", discountPrice: "50"),
-            HomeProductCollectionViewCellViewModel(imageUrlString: "", title: "title2", reasonDiscountString: "Coupon Discount", originalPrice: "75", discountPrice: "60"),
-            HomeProductCollectionViewCellViewModel(imageUrlString: "", title: "title3", reasonDiscountString: "Coupon Discount", originalPrice: "85", discountPrice: "70"),
-            HomeProductCollectionViewCellViewModel(imageUrlString: "", title: "title4", reasonDiscountString: "Coupon Discount", originalPrice: "95", discountPrice: "80"),
-            HomeProductCollectionViewCellViewModel(imageUrlString: "", title: "title5", reasonDiscountString: "Coupon Discount", originalPrice: "105", discountPrice: "90")],
-                             toSection: .horizontalProductItem)
+        snapShot.appendItems(horizontalProductViewModels, toSection: .horizontalProductItem)
         
-        // vertical goods scroll
+        // Vertical Product Section
         snapShot.appendSections([.verticalProductItem])
-        snapShot.appendItems([
-            HomeProductCollectionViewCellViewModel(imageUrlString: "", title: "product1", reasonDiscountString: "Coupon Discount", originalPrice: "65", discountPrice: "50"),
-            HomeProductCollectionViewCellViewModel(imageUrlString: "", title: "product2", reasonDiscountString: "Coupon Discount", originalPrice: "75", discountPrice: "60"),
-            HomeProductCollectionViewCellViewModel(imageUrlString: "", title: "product3", reasonDiscountString: "Coupon Discount", originalPrice: "85", discountPrice: "70"),
-            HomeProductCollectionViewCellViewModel(imageUrlString: "", title: "product4", reasonDiscountString: "Coupon Discount", originalPrice: "95", discountPrice: "80"),
-            HomeProductCollectionViewCellViewModel(imageUrlString: "", title: "product5", reasonDiscountString: "Coupon Discount", originalPrice: "105", discountPrice: "90")],
-                             toSection: .verticalProductItem)
+        snapShot.appendItems(verticalProductViewModels, toSection: .verticalProductItem)
         
         dataSource?.apply(snapShot)
     }
+
+    
     
     private func bannerCell(_ collectionView: UICollectionView, _ indexPath: IndexPath, _ viewModel: AnyHashable) -> UICollectionViewCell {
         guard let viewModel = viewModel as? HomeBannerCollectionViewCellViewModel,
