@@ -24,6 +24,7 @@
 		ABB02CC32C85529F00E4890D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB02CC22C85529F00E4890D /* HomeViewController.swift */; };
 		ABB02CC92C85904D00E4890D /* HomeBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB02CC82C85904D00E4890D /* HomeBannerCollectionViewCell.swift */; };
 		ABB02CCB2C85B1C400E4890D /* HomeProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB02CCA2C85B1C400E4890D /* HomeProductCollectionViewCell.swift */; };
+		ABC7744D2C869A710060C693 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7744C2C869A710060C693 /* NetworkService.swift */; };
 		ABC890422C805A7C008A90BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABC890412C805A7C008A90BE /* GoogleService-Info.plist */; };
 		ABC890452C805AED008A90BE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ABC890442C805AED008A90BE /* FirebaseAuth */; };
 		ABC890482C8072AC008A90BE /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = ABC890472C8072AC008A90BE /* AWSCognitoAuthPlugin */; };
@@ -51,6 +52,7 @@
 		ABB02CC22C85529F00E4890D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		ABB02CC82C85904D00E4890D /* HomeBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		ABB02CCA2C85B1C400E4890D /* HomeProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABC7744C2C869A710060C693 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		ABC890412C805A7C008A90BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABCADCE92C7DB21500B0318F /* SFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 			children = (
 				ABB02CC72C85792800E4890D /* Delegate */,
 				ABCADCE62C7DAB0D00B0318F /* DesignSource */,
+				ABC7744B2C869A3C0060C693 /* Network */,
 				ABB02CC42C8573D600E4890D /* Feature */,
 				AB5613B32C7C15F6002B6B4B /* Info.plist */,
 				ABC890412C805A7C008A90BE /* GoogleService-Info.plist */,
@@ -122,10 +125,9 @@
 		ABB02CC62C8573EC00E4890D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				ABC7744A2C8682B90060C693 /* View */,
 				ABB02CC02C85520C00E4890D /* Home.storyboard */,
 				ABB02CC22C85529F00E4890D /* HomeViewController.swift */,
-				ABB02CC82C85904D00E4890D /* HomeBannerCollectionViewCell.swift */,
-				ABB02CCA2C85B1C400E4890D /* HomeProductCollectionViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -137,6 +139,23 @@
 				AB5613A72C7C15F5002B6B4B /* SceneDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		ABC7744A2C8682B90060C693 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABB02CC82C85904D00E4890D /* HomeBannerCollectionViewCell.swift */,
+				ABB02CCA2C85B1C400E4890D /* HomeProductCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ABC7744B2C869A3C0060C693 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ABC7744C2C869A710060C693 /* NetworkService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		ABCADCE62C7DAB0D00B0318F /* DesignSource */ = {
@@ -240,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC7744D2C869A710060C693 /* NetworkService.swift in Sources */,
 				ABCADCEA2C7DB21500B0318F /* SFont.swift in Sources */,
 				ABB02CCB2C85B1C400E4890D /* HomeProductCollectionViewCell.swift in Sources */,
 				AB5613A62C7C15F5002B6B4B /* AppDelegate.swift in Sources */,
