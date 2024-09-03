@@ -16,6 +16,8 @@
 		AB6D62F92C844C2E00D22A6F /* SColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D62F82C844C2E00D22A6F /* SColor.swift */; };
 		AB6D62FB2C844CB400D22A6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6D62FA2C844CB400D22A6F /* Images.xcassets */; };
 		AB6D62FD2C845E6C00D22A6F /* SImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D62FC2C845E6C00D22A6F /* SImage.swift */; };
+		ABA46C5E2C86D464004061C8 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA46C5D2C86D464004061C8 /* HomeResponse.swift */; };
+		ABA46C622C86FA6C004061C8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ABA46C612C86FA6C004061C8 /* Kingfisher */; };
 		ABAD8F0F2C7C4EA400BE993A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = ABAD8F0E2C7C4EA400BE993A /* .gitignore */; };
 		ABAD8F112C7C58D100BE993A /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAD8F102C7C58D100BE993A /* Splash.storyboard */; };
 		ABAD8F132C7C594C00BE993A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAD8F122C7C594C00BE993A /* SplashViewController.swift */; };
@@ -26,9 +28,6 @@
 		ABB02CCB2C85B1C400E4890D /* HomeProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB02CCA2C85B1C400E4890D /* HomeProductCollectionViewCell.swift */; };
 		ABC7744D2C869A710060C693 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7744C2C869A710060C693 /* NetworkService.swift */; };
 		ABC890422C805A7C008A90BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABC890412C805A7C008A90BE /* GoogleService-Info.plist */; };
-		ABC890452C805AED008A90BE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ABC890442C805AED008A90BE /* FirebaseAuth */; };
-		ABC890482C8072AC008A90BE /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = ABC890472C8072AC008A90BE /* AWSCognitoAuthPlugin */; };
-		ABCADCE52C7DA46400B0318F /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = ABCADCE42C7DA46400B0318F /* DotLottie */; };
 		ABCADCEA2C7DB21500B0318F /* SFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCADCE92C7DB21500B0318F /* SFont.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +43,7 @@
 		AB6D62F82C844C2E00D22A6F /* SColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SColor.swift; sourceTree = "<group>"; };
 		AB6D62FA2C844CB400D22A6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AB6D62FC2C845E6C00D22A6F /* SImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SImage.swift; sourceTree = "<group>"; };
+		ABA46C5D2C86D464004061C8 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
 		ABAD8F0E2C7C4EA400BE993A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		ABAD8F102C7C58D100BE993A /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		ABAD8F122C7C594C00BE993A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -62,9 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABCADCE52C7DA46400B0318F /* DotLottie in Frameworks */,
-				ABC890452C805AED008A90BE /* FirebaseAuth in Frameworks */,
-				ABC890482C8072AC008A90BE /* AWSCognitoAuthPlugin in Frameworks */,
+				ABA46C622C86FA6C004061C8 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,11 +94,20 @@
 				ABB02CC72C85792800E4890D /* Delegate */,
 				ABCADCE62C7DAB0D00B0318F /* DesignSource */,
 				ABC7744B2C869A3C0060C693 /* Network */,
+				ABA46C5C2C86D36A004061C8 /* Model */,
 				ABB02CC42C8573D600E4890D /* Feature */,
 				AB5613B32C7C15F6002B6B4B /* Info.plist */,
 				ABC890412C805A7C008A90BE /* GoogleService-Info.plist */,
 			);
 			path = "Store-ios";
+			sourceTree = "<group>";
+		};
+		ABA46C5C2C86D36A004061C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABA46C5D2C86D464004061C8 /* HomeResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		ABB02CC42C8573D600E4890D /* Feature */ = {
@@ -188,9 +195,7 @@
 			);
 			name = "Store-ios";
 			packageProductDependencies = (
-				ABCADCE42C7DA46400B0318F /* DotLottie */,
-				ABC890442C805AED008A90BE /* FirebaseAuth */,
-				ABC890472C8072AC008A90BE /* AWSCognitoAuthPlugin */,
+				ABA46C612C86FA6C004061C8 /* Kingfisher */,
 			);
 			productName = "store-ios";
 			productReference = AB5613A22C7C15F5002B6B4B /* Store-ios.app */;
@@ -221,9 +226,7 @@
 			);
 			mainGroup = AB5613992C7C15F5002B6B4B;
 			packageReferences = (
-				ABCADCE32C7DA46400B0318F /* XCRemoteSwiftPackageReference "dotlottie-ios" */,
-				ABC890432C805AED008A90BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				ABC890462C8072AB008A90BE /* XCRemoteSwiftPackageReference "amplify-ios" */,
+				ABA46C602C86FA6C004061C8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = AB5613A32C7C15F5002B6B4B /* Products */;
 			projectDirPath = "";
@@ -269,6 +272,7 @@
 				ABAD8F132C7C594C00BE993A /* SplashViewController.swift in Sources */,
 				AB6D62FD2C845E6C00D22A6F /* SImage.swift in Sources */,
 				ABB02CC92C85904D00E4890D /* HomeBannerCollectionViewCell.swift in Sources */,
+				ABA46C5E2C86D464004061C8 /* HomeResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,47 +491,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ABC890432C805AED008A90BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		ABA46C602C86FA6C004061C8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 11.1.0;
-			};
-		};
-		ABC890462C8072AB008A90BE /* XCRemoteSwiftPackageReference "amplify-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/aws-amplify/amplify-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.39.0;
-			};
-		};
-		ABCADCE32C7DA46400B0318F /* XCRemoteSwiftPackageReference "dotlottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/LottieFiles/dotlottie-ios.git";
-			requirement = {
-				branch = main;
-				kind = branch;
+				minimumVersion = 7.12.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ABC890442C805AED008A90BE /* FirebaseAuth */ = {
+		ABA46C612C86FA6C004061C8 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ABC890432C805AED008A90BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		ABC890472C8072AC008A90BE /* AWSCognitoAuthPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ABC890462C8072AB008A90BE /* XCRemoteSwiftPackageReference "amplify-ios" */;
-			productName = AWSCognitoAuthPlugin;
-		};
-		ABCADCE42C7DA46400B0318F /* DotLottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ABCADCE32C7DA46400B0318F /* XCRemoteSwiftPackageReference "dotlottie-ios" */;
-			productName = DotLottie;
+			package = ABA46C602C86FA6C004061C8 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
