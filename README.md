@@ -55,13 +55,16 @@
        - Implemented Vertical Scroll Layout: Created a product list for general items using a vertical scroll layout. This arrangement allows users to scroll through the list of products efficiently, organizing them vertically for better display and navigation. 
      - **Home Screen Data Model Implementation** - [commit 2ec3f9f](https://github.com/ld5ehom/store-ios/commit/2ec3f9f16e548292592e34252c31983755bb86ad) :   
        - Refactored the cell layout configuration by moving it from the view controller to the cell extension, resulting in cleaner code and improved modularity.
-       - Implemented a set of data models to represent the JSON response structure for the Home screen, including models for banners, horizontal product listings, vertical product listings, and themed banners.
+       - Implemented a set of data models to represent the JSON response structure for the Home screen, including models for banners, horizontal product listings and vertical product listings.
        - Fetched data for these models from a JSON file hosted on GitHub, which populates the Home screen content.
      - **Kingfisher Library Setup** - [commit 616da47](https://github.com/ld5ehom/store-ios/commit/616da479a3568ef002e16e830add145bcbe7d90c) :   
        - Integrated the Kingfisher library to handle image downloading and caching. This allows for efficient image loading with caching mechanisms, reducing the need for repeated network requests and improving performance.
-     - **Refactored Home View Controller with MVVM Pattern** 
+     - **Refactored Home View Controller with MVVM Pattern** - [commit 63c9371](https://github.com/ld5ehom/store-ios/commit/63c9371c156d51b27f64a7d0829e15fab144b532) : 
        - Separated business logic into the view model for a cleaner and more maintainable code structure. Used Combine to observe and bind data updates, allowing for automatic UI updates when the underlying data changes, utilizing the @Published property wrapper.
-       
+     - **Refactored Home View to MVI Pattern** 
+       - Adopted the MVI pattern to manage external changes and asynchronous communication through actions, resulting in a clearer code structure and simplified testing of success and failure scenarios.
+     - **Enhanced Network Service for Reusability and Extensibility**      
+       - Refactored the NetworkService to improve reusability and scalability by separating the host URL and creating a flexible URL generation function. This design supports easy addition of new APIs and reduces code duplication.
 
 
 
