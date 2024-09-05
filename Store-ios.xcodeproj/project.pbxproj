@@ -30,6 +30,8 @@
 		ABB02CC92C85904D00E4890D /* HomeBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB02CC82C85904D00E4890D /* HomeBannerCollectionViewCell.swift */; };
 		ABB02CCB2C85B1C400E4890D /* HomeProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB02CCA2C85B1C400E4890D /* HomeProductCollectionViewCell.swift */; };
 		ABB80CE02C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB80CDF2C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift */; };
+		ABB80CE22C89993B0046543C /* HomeThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB80CE12C89993B0046543C /* HomeThemeCollectionViewCell.swift */; };
+		ABB80CE42C89B5610046543C /* HomeThemeHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB80CE32C89B5610046543C /* HomeThemeHeaderCollectionReusableView.swift */; };
 		ABC7744D2C869A710060C693 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7744C2C869A710060C693 /* NetworkService.swift */; };
 		ABC890422C805A7C008A90BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABC890412C805A7C008A90BE /* GoogleService-Info.plist */; };
 		ABCADCEA2C7DB21500B0318F /* SFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCADCE92C7DB21500B0318F /* SFont.swift */; };
@@ -60,6 +62,8 @@
 		ABB02CC82C85904D00E4890D /* HomeBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		ABB02CCA2C85B1C400E4890D /* HomeProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		ABB80CDF2C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSeparateLineCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABB80CE12C89993B0046543C /* HomeThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThemeCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABB80CE32C89B5610046543C /* HomeThemeHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThemeHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		ABC7744C2C869A710060C693 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		ABC890412C805A7C008A90BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABCADCE92C7DB21500B0318F /* SFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFont.swift; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 				ABB02CCA2C85B1C400E4890D /* HomeProductCollectionViewCell.swift */,
 				ABA325902C8827890034855A /* HomeCouponButtonCollectionViewCell.swift */,
 				ABB80CDF2C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift */,
+				ABB80CE12C89993B0046543C /* HomeThemeCollectionViewCell.swift */,
+				ABB80CE32C89B5610046543C /* HomeThemeHeaderCollectionReusableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 				ABCADCEA2C7DB21500B0318F /* SFont.swift in Sources */,
 				ABB02CCB2C85B1C400E4890D /* HomeProductCollectionViewCell.swift in Sources */,
 				AB5613A62C7C15F5002B6B4B /* AppDelegate.swift in Sources */,
+				ABB80CE42C89B5610046543C /* HomeThemeHeaderCollectionReusableView.swift in Sources */,
 				ABA325912C8827890034855A /* HomeCouponButtonCollectionViewCell.swift in Sources */,
 				ABB02CC32C85529F00E4890D /* HomeViewController.swift in Sources */,
 				AB6D62F92C844C2E00D22A6F /* SColor.swift in Sources */,
@@ -295,6 +302,7 @@
 				ABAD8F132C7C594C00BE993A /* SplashViewController.swift in Sources */,
 				AB6D62FD2C845E6C00D22A6F /* SImage.swift in Sources */,
 				ABB02CC92C85904D00E4890D /* HomeBannerCollectionViewCell.swift in Sources */,
+				ABB80CE22C89993B0046543C /* HomeThemeCollectionViewCell.swift in Sources */,
 				ABB80CE02C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift in Sources */,
 				ABA46C5E2C86D464004061C8 /* HomeResponse.swift in Sources */,
 			);

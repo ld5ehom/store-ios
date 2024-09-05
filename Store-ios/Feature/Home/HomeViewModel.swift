@@ -26,6 +26,8 @@ final class HomeViewModel {
             var couponState: [HomeCouponButtonCollectionViewCellViewModel]?
             var separateLine1ViewModels: [HomeSeparateLineCollectionViewCellViewModel] = [HomeSeparateLineCollectionViewCellViewModel()]
             var separateLine2ViewModels: [HomeSeparateLineCollectionViewCellViewModel] = [HomeSeparateLineCollectionViewCellViewModel()]
+            var themeViewModels: (headerViewModel: HomeThemeHeaderCollectionReusableViewModel,
+                                  items: [HomeThemeCollectionViewCellViewModel])?
         }
         @Published var collectionViewModels: CollectionViewModels = CollectionViewModels()
     }
@@ -37,8 +39,6 @@ final class HomeViewModel {
     
     // coupon download check key
     private let couponDownloadKey: String = "CouponDownloaded"
-    
-    
     
     // Handles different actions: loading data, processing successful responses into view models, and handling errors.
     func process(action: Action) {
@@ -58,7 +58,6 @@ final class HomeViewModel {
         }
     }
 
-    
     // load data task deinit
     deinit {
         loadDataTask?.cancel()
@@ -87,11 +86,11 @@ extension HomeViewModel {
         process(action: .getCouponSuccess(couponState))
     }
     
-    
     private func transformResponse(_ response: HomeResponse){
         Task { await transformBanner(response) }
         Task { await transformHorizontalProduct(response) }
         Task { await transformVerticalProduct(response) }
+        Task { await transformTheme(response) }
     }
     
     @MainActor
@@ -110,6 +109,15 @@ extension HomeViewModel {
     private func transformVerticalProduct(_ response: HomeResponse) async {
         state.collectionViewModels.verticalProductViewModels = productToHomeProductCollectionViewCellViewModel(response.verticalProducts)
     }
+    
+    @MainActor
+    private func transformTheme(_ response: HomeResponse) async {
+        let items = response.themes.map {
+            HomeThemeCollectionViewCellViewModel(themeImageUrl: $0.imageUrl)
+        }
+        state.collectionViewModels.themeViewModels = (HomeThemeHeaderCollectionReusableViewModel(headerText: "Deals for you") , items)
+    }
+    
     
     // product cell
     private func productToHomeProductCollectionViewCellViewModel(_ product: [Product]) -> [HomeProductCollectionViewCellViewModel] {
@@ -133,5 +141,4 @@ extension HomeViewModel {
         UserDefaults.standard.setValue(true, forKey: couponDownloadKey)
         process(action: .loadCoupon)
     }
-    
 }
