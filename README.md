@@ -61,11 +61,13 @@
        - Integrated the Kingfisher library to handle image downloading and caching. This allows for efficient image loading with caching mechanisms, reducing the need for repeated network requests and improving performance.
      - **Refactored Home View Controller with MVVM Pattern** - [commit 63c9371](https://github.com/ld5ehom/store-ios/commit/63c9371c156d51b27f64a7d0829e15fab144b532) : 
        - Separated business logic into the view model for a cleaner and more maintainable code structure. Used Combine to observe and bind data updates, allowing for automatic UI updates when the underlying data changes, utilizing the @Published property wrapper.
-     - **Refactored Home View to MVI Pattern** 
+     - **Refactored Home View to MVI Pattern** - [commit 90e9bb2](https://github.com/ld5ehom/store-ios/commit/90e9bb2f9543406a606a091afea537c4bc1a58e2) : 
        - Adopted the MVI pattern to manage external changes and asynchronous communication through actions, resulting in a clearer code structure and simplified testing of success and failure scenarios.
-     - **Enhanced Network Service for Reusability and Extensibility**      
+     - **Enhanced Network Service for Reusability and Extensibility** - [commit 90e9bb2](https://github.com/ld5ehom/store-ios/commit/90e9bb2f9543406a606a091afea537c4bc1a58e2) :      
        - Refactored the NetworkService to improve reusability and scalability by separating the host URL and creating a flexible URL generation function. This design supports easy addition of new APIs and reduces code duplication.
-
+     - **Coupon Button: UI and View Model Integration**       
+       - Added UI and related functionality for the coupon button, allowing its enabled/disabled state to dynamically change based on the view model.
+       - Improved code modularity by separating logic not directly tied to the MVI lifecycle into extensions.
 
 
 **Task 4. Cart Page**

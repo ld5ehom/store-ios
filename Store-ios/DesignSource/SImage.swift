@@ -8,6 +8,10 @@
 import UIKit
 
 enum SImage {
+    // coupon download button 
+    static var buttonActivate: UIImage = UIImage(resource: .btnActivate)
+    static var buttonComplete: UIImage = UIImage(resource: .btnComplete)
+    
     // Button
     static var profile: UIImage = UIImage(resource: .user)
     static var topBtn: UIImage = UIImage(resource: .circleArrowUp)

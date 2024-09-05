@@ -16,6 +16,7 @@
 		AB6D62F92C844C2E00D22A6F /* SColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D62F82C844C2E00D22A6F /* SColor.swift */; };
 		AB6D62FB2C844CB400D22A6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6D62FA2C844CB400D22A6F /* Images.xcassets */; };
 		AB6D62FD2C845E6C00D22A6F /* SImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D62FC2C845E6C00D22A6F /* SImage.swift */; };
+		ABA325912C8827890034855A /* HomeCouponButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA325902C8827890034855A /* HomeCouponButtonCollectionViewCell.swift */; };
 		ABA46C5E2C86D464004061C8 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA46C5D2C86D464004061C8 /* HomeResponse.swift */; };
 		ABA46C622C86FA6C004061C8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ABA46C612C86FA6C004061C8 /* Kingfisher */; };
 		ABA46C642C87057C004061C8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA46C632C87057C004061C8 /* HomeViewModel.swift */; };
@@ -28,6 +29,7 @@
 		ABB02CC32C85529F00E4890D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB02CC22C85529F00E4890D /* HomeViewController.swift */; };
 		ABB02CC92C85904D00E4890D /* HomeBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB02CC82C85904D00E4890D /* HomeBannerCollectionViewCell.swift */; };
 		ABB02CCB2C85B1C400E4890D /* HomeProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB02CCA2C85B1C400E4890D /* HomeProductCollectionViewCell.swift */; };
+		ABB80CE02C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB80CDF2C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift */; };
 		ABC7744D2C869A710060C693 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7744C2C869A710060C693 /* NetworkService.swift */; };
 		ABC890422C805A7C008A90BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABC890412C805A7C008A90BE /* GoogleService-Info.plist */; };
 		ABCADCEA2C7DB21500B0318F /* SFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCADCE92C7DB21500B0318F /* SFont.swift */; };
@@ -45,6 +47,7 @@
 		AB6D62F82C844C2E00D22A6F /* SColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SColor.swift; sourceTree = "<group>"; };
 		AB6D62FA2C844CB400D22A6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AB6D62FC2C845E6C00D22A6F /* SImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SImage.swift; sourceTree = "<group>"; };
+		ABA325902C8827890034855A /* HomeCouponButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCouponButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		ABA46C5D2C86D464004061C8 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
 		ABA46C632C87057C004061C8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		ABA7E44F2C87EB500018F263 /* Numeric+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+Extensions.swift"; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		ABB02CC22C85529F00E4890D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		ABB02CC82C85904D00E4890D /* HomeBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		ABB02CCA2C85B1C400E4890D /* HomeProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABB80CDF2C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSeparateLineCollectionViewCell.swift; sourceTree = "<group>"; };
 		ABC7744C2C869A710060C693 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		ABC890412C805A7C008A90BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABCADCE92C7DB21500B0318F /* SFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFont.swift; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 			children = (
 				ABB02CC82C85904D00E4890D /* HomeBannerCollectionViewCell.swift */,
 				ABB02CCA2C85B1C400E4890D /* HomeProductCollectionViewCell.swift */,
+				ABA325902C8827890034855A /* HomeCouponButtonCollectionViewCell.swift */,
+				ABB80CDF2C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 				ABCADCEA2C7DB21500B0318F /* SFont.swift in Sources */,
 				ABB02CCB2C85B1C400E4890D /* HomeProductCollectionViewCell.swift in Sources */,
 				AB5613A62C7C15F5002B6B4B /* AppDelegate.swift in Sources */,
+				ABA325912C8827890034855A /* HomeCouponButtonCollectionViewCell.swift in Sources */,
 				ABB02CC32C85529F00E4890D /* HomeViewController.swift in Sources */,
 				AB6D62F92C844C2E00D22A6F /* SColor.swift in Sources */,
 				AB5613A82C7C15F5002B6B4B /* SceneDelegate.swift in Sources */,
@@ -288,6 +295,7 @@
 				ABAD8F132C7C594C00BE993A /* SplashViewController.swift in Sources */,
 				AB6D62FD2C845E6C00D22A6F /* SImage.swift in Sources */,
 				ABB02CC92C85904D00E4890D /* HomeBannerCollectionViewCell.swift in Sources */,
+				ABB80CE02C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift in Sources */,
 				ABA46C5E2C86D464004061C8 /* HomeResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
