@@ -17,17 +17,20 @@ struct HomeProductCollectionViewCellViewModel: Hashable {
     let discountPrice: String
 }
     
-class HomeProductCollectionViewCell: UICollectionViewCell {
+final class HomeProductCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var productItemImageView: UIImageView!{
+    static let resuableId: String = "HomeProductCollectionViewCell"
+    
+    @IBOutlet private weak var productItemImageView: UIImageView!{
         didSet {
+            // corner round radius 
             productItemImageView.layer.cornerRadius = 5
         }
     }
-    @IBOutlet weak var productTitleLabel: UILabel!
-    @IBOutlet weak var productReasonDiscountLabel: UILabel!
-    @IBOutlet weak var originalPriceLabel: UILabel!
-    @IBOutlet weak var discountPriceLabel: UILabel!
+    @IBOutlet private weak var productTitleLabel: UILabel!
+    @IBOutlet private weak var productReasonDiscountLabel: UILabel!
+    @IBOutlet private weak var originalPriceLabel: UILabel!
+    @IBOutlet private weak var discountPriceLabel: UILabel!
     
     func setViewModel(_ viewModel: HomeProductCollectionViewCellViewModel) {
         // kingfisher image url
@@ -37,12 +40,10 @@ class HomeProductCollectionViewCell: UICollectionViewCell {
         productReasonDiscountLabel.text = viewModel.reasonDiscountString
         
         //strike-through
-        originalPriceLabel.attributedText = NSMutableAttributedString(string: viewModel.originalPrice,
-                                                                      attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue])
+        originalPriceLabel.attributedText = NSMutableAttributedString(string: viewModel.originalPrice, attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue])
 
         discountPriceLabel.text = viewModel.discountPrice
-        
-        
+      
     }
 }
 
@@ -81,7 +82,7 @@ extension HomeProductCollectionViewCell {
         let itemSize : NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/2), heightDimension: .estimated(277))
         let item: NSCollectionLayoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        // spacing
+        // item spacing
         item.contentInsets = .init(top: 0, leading: 2.5, bottom: 0, trailing: 2.5)
         
         // Set the group size with a fixed width of 117 and an estimated height of 224
@@ -95,7 +96,10 @@ extension HomeProductCollectionViewCell {
         section.orthogonalScrollingBehavior = .none
         
         // section margin
-        section.contentInsets = .init(top: 20, leading: 19 - 2.5, bottom: 0, trailing: 19 - 2.5)
+        section.contentInsets = .init(top: 40, leading: 19 - 2.5, bottom: 0, trailing: 19 - 2.5)
+        
+        // section spacing
+        section.interGroupSpacing = 10
         
         // Return the compositional layout for the collection view
         return section

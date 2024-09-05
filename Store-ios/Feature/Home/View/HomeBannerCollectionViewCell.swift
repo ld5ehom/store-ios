@@ -13,19 +13,20 @@ struct HomeBannerCollectionViewCellViewModel: Hashable {
 }
 
 // Banner slide
-class HomeBannerCollectionViewCell: UICollectionViewCell {
+final class HomeBannerCollectionViewCell: UICollectionViewCell {
     
-    // slide image view 
-    @IBOutlet weak var imageView: UIImageView!
+    // HomeBannerCollectionViewCell string id 
+    static let reusableId: String = "HomeBannerCollectionViewCell"
+    
+    // slide image view
+    @IBOutlet private weak var imageView: UIImageView!
     
     
     func setViewModel(_ viewModel: HomeBannerCollectionViewCellViewModel) {
         // kingfisher
         imageView.kf.setImage(with: URL(string: viewModel.bannerImageUrl))
     }
-    
 }
-
 
 extension HomeBannerCollectionViewCell {
     static func bannerLayout() -> NSCollectionLayoutSection {

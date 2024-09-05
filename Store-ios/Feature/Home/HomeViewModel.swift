@@ -2,17 +2,20 @@
 //  HomeViewModel.swift
 //  Store-ios
 //
-//  Created by TaeWook Park on 9/3/24.
+//  Created by TaeWook Park on 9/4/24.
 //
 import Combine
 import Foundation
 
-class HomeViewModel {
+final class HomeViewModel {
     
     enum Action {
         case loadData
+        case loadCoupon
         case getDataSuccess(HomeResponse)
         case getDataFailure(Error)
+        case getCouponSuccess(Bool)
+        case didTapCouponButton
     }
     
     final class State {
@@ -20,6 +23,9 @@ class HomeViewModel {
             var bannerViewModels: [HomeBannerCollectionViewCellViewModel]?
             var horizontalProductViewModels: [HomeProductCollectionViewCellViewModel]?
             var verticalProductViewModels: [HomeProductCollectionViewCellViewModel]?
+            var couponState: [HomeCouponButtonCollectionViewCellViewModel]?
+            var separateLine1ViewModels: [HomeSeparateLineCollectionViewCellViewModel] = [HomeSeparateLineCollectionViewCellViewModel()]
+            var separateLine2ViewModels: [HomeSeparateLineCollectionViewCellViewModel] = [HomeSeparateLineCollectionViewCellViewModel()]
         }
         @Published var collectionViewModels: CollectionViewModels = CollectionViewModels()
     }
@@ -29,18 +35,38 @@ class HomeViewModel {
     
     private var loadDataTask: Task<Void, Never>?
     
+    // coupon download check key
+    private let couponDownloadKey: String = "CouponDownloaded"
+    
+    
     
     // Handles different actions: loading data, processing successful responses into view models, and handling errors.
     func process(action: Action) {
         switch action {
         case .loadData:
             loadData()
+        case .loadCoupon:
+            loadCoupon()
         case let .getDataSuccess(response):
             transformResponse(response)
         case let .getDataFailure(error):
             print("Network Error: \(error)")
+        case let .getCouponSuccess(isDownloaded):
+            Task { await transformCoupon(isDownloaded) }
+        case .didTapCouponButton:
+            downloadCoupon()
         }
     }
+
+    
+    // load data task deinit
+    deinit {
+        loadDataTask?.cancel()
+    }
+}
+
+
+extension HomeViewModel {
     
     // Asynchronously loads data from the API, maps the JSON response to view models for banners and products, and applies them to the collection view snapshot.
     private func loadData() {
@@ -55,10 +81,12 @@ class HomeViewModel {
         }
     }
     
-    // load data task deinit
-    deinit {
-        loadDataTask?.cancel()
+    // get coupon (success)
+    private func loadCoupon() {
+        let couponState: Bool = UserDefaults.standard.bool(forKey: couponDownloadKey)
+        process(action: .getCouponSuccess(couponState))
     }
+    
     
     private func transformResponse(_ response: HomeResponse){
         Task { await transformBanner(response) }
@@ -93,4 +121,17 @@ class HomeViewModel {
                                                    discountPrice: $0.discountPrice.moneyString)
         }
     }
+    
+    // coupon success
+    @MainActor
+    private func transformCoupon(_ isDownloaded: Bool) async {
+        state.collectionViewModels.couponState = [.init(state: isDownloaded ? .disable : .enable)]
+    }
+    
+    // download coupon
+    private func downloadCoupon() {
+        UserDefaults.standard.setValue(true, forKey: couponDownloadKey)
+        process(action: .loadCoupon)
+    }
+    
 }
