@@ -20,8 +20,8 @@ final class HomeViewController: UIViewController {
         case couponButton
         case verticalProductItem
         case separateLine2
+        case theme
     }
-    
     
     // Collection View
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -45,8 +45,6 @@ final class HomeViewController: UIViewController {
     
     // coupon button key
     private var didTapCouponButton: PassthroughSubject<Void, Never> = PassthroughSubject<Void, Never>()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,8 +85,12 @@ final class HomeViewController: UIViewController {
                 return HomeCouponButtonCollectionViewCell.couponButtonItemLayout()
                 
             // separate line
-            case . separateLine1, .separateLine2:
+            case .separateLine1, .separateLine2:
                 return HomeSeparateLineCollectionViewCell.separateLineLayout()
+                
+            // theme
+            case .theme:
+                return HomeThemeCollectionViewCell.themeLayout()
                 
             case .none: return nil
             }
@@ -110,7 +112,7 @@ final class HomeViewController: UIViewController {
     
     // Data Source
     private func setDataSource() -> DataSource {
-        return UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { [weak self] collectionView, indexPath, viewModel in
+        let dataSource: DataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { [weak self] collectionView, indexPath, viewModel in
             
             switch self?.currentSection[indexPath.section] {
                 
@@ -126,10 +128,25 @@ final class HomeViewController: UIViewController {
             case .separateLine1, .separateLine2:
                 return self?.separateLineCell(collectionView, indexPath, viewModel)
                 
+            case .theme:
+                return self?.themeCell(collectionView, indexPath, viewModel)
+                
             case .none:
                 return .init()
             }
         })
+        
+        // Theme Header
+        dataSource.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
+            guard kind == UICollectionView.elementKindSectionHeader,
+                  let viewModel = self?.viewModel.state.collectionViewModels.themeViewModels?.headerViewModel else { return nil }
+            
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeThemeHeaderCollectionReusableView.reusableId, for: indexPath) as? HomeThemeHeaderCollectionReusableView
+            headerView?.setViewModel(viewModel)
+            return headerView
+        }
+        
+        return dataSource
     }
     
     // Applies a snapshot to the collection view, adding sections and items based on available view models.
@@ -160,11 +177,21 @@ final class HomeViewController: UIViewController {
             snapShot.appendItems(couponViewModels, toSection: .couponButton)
         }
         
-        
         // Add vertical product section and items to the snapshot only if verticalProductViewModels are present in the view model.
         if let verticalProductViewModels = viewModel.state.collectionViewModels.verticalProductViewModels {
             snapShot.appendSections([.verticalProductItem])
             snapShot.appendItems(verticalProductViewModels, toSection: .verticalProductItem)
+        }
+        
+        // Horizontal carousel Theme
+        if let themeViewModels = viewModel.state.collectionViewModels.themeViewModels?.items {
+            
+            // separate line
+            snapShot.appendSections([.separateLine2])
+            snapShot.appendItems(viewModel.state.collectionViewModels.separateLine1ViewModels, toSection: .separateLine2)
+            
+            snapShot.appendSections([.theme])
+            snapShot.appendItems(themeViewModels, toSection: .theme)
         }
         
         dataSource.apply(snapShot)
@@ -197,7 +224,15 @@ final class HomeViewController: UIViewController {
     // separate line
     private func separateLineCell(_ collectionView: UICollectionView, _ indexPath: IndexPath, _ viewModel: AnyHashable) -> UICollectionViewCell {
         guard let viewModel = viewModel as? HomeSeparateLineCollectionViewCellViewModel,
-              let cell: HomeSeparateLineCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeSeparateLineCollectionViewCell.resuableId, for: indexPath) as? HomeSeparateLineCollectionViewCell else { return .init() }
+              let cell: HomeSeparateLineCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeSeparateLineCollectionViewCell.reusableId, for: indexPath) as? HomeSeparateLineCollectionViewCell else { return .init() }
+        cell.setViewModel(viewModel)
+        return cell
+    }
+    
+    // theme cell
+    private func themeCell(_ collectionView: UICollectionView, _ indexPath: IndexPath, _ viewModel: AnyHashable) -> UICollectionViewCell {
+        guard let viewModel = viewModel as? HomeThemeCollectionViewCellViewModel,
+              let cell: HomeThemeCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeThemeCollectionViewCell.reusableId, for: indexPath) as? HomeThemeCollectionViewCell else { return .init() }
         cell.setViewModel(viewModel)
         return cell
     }

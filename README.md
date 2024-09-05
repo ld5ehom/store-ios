@@ -48,7 +48,7 @@
      - **Home Banner Carousel** - [commit 04647e9](https://github.com/ld5ehom/store-ios/commit/04647e90727f0b0f90285999675564785adb7b12) : 
        - The Home storyboard view controller wasn't connected, so the storyboard was loaded to properly use the Home view controller.
        - Using a compositional layout and diffable data source to efficiently manage and display collection view items. 
-     - **Home Screen Recommended Products Using Horizontal Carousel** - [commit 9f83a10](https://github.com/ld5ehom/store-ios/commit/9f83a10c80d0499c1b372c3f65d21044920bffef) :  
+     - **Home Screen Main Event Products Using Horizontal Carousel** - [commit 9f83a10](https://github.com/ld5ehom/store-ios/commit/9f83a10c80d0499c1b372c3f65d21044920bffef) :  
        - Implemented a horizontal carousel component for the Home screen, where each cell displays product details such as images, titles, and prices. The carousel allows users to scroll through products horizontally. Each cell features a product image, title, and price, with the original price displayed with a strikethrough effect to highlight discounts.
      - **Home Screen Product Display Using Vertical Scroll** - [commit 98ae0a5](https://github.com/ld5ehom/store-ios/commit/98ae0a547030f1e15d807177fbb489d1ac7b3c0c) :  
        - Refactored Cell Layout Configuration: Moved the cell layout configuration from the view controller to the cell extension, resulting in cleaner code and improved modularity.
@@ -65,9 +65,12 @@
        - Adopted the MVI pattern to manage external changes and asynchronous communication through actions, resulting in a clearer code structure and simplified testing of success and failure scenarios.
      - **Enhanced Network Service for Reusability and Extensibility** - [commit 90e9bb2](https://github.com/ld5ehom/store-ios/commit/90e9bb2f9543406a606a091afea537c4bc1a58e2) :      
        - Refactored the NetworkService to improve reusability and scalability by separating the host URL and creating a flexible URL generation function. This design supports easy addition of new APIs and reduces code duplication.
-     - **Coupon Button: UI and View Model Integration**       
+     - **Coupon Button: UI and View Model Integration** - [commit cd85831](https://github.com/ld5ehom/store-ios/commit/cd85831de9c2a110e66766d55993607c4dc6f911) :    
        - Added UI and related functionality for the coupon button, allowing its enabled/disabled state to dynamically change based on the view model.
        - Improved code modularity by separating logic not directly tied to the MVI lifecycle into extensions.
+     - **Horizontal Theme and Product Recommendation Carousel on Home Screen**
+       - Implemented a basic horizontal theme image carousel using Kingfisher, along with a "Deals for You" title at the bottom and an additional theme carousel for product recommendations.
+
 
 
 **Task 4. Cart Page**
