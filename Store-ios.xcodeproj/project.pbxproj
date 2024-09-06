@@ -29,6 +29,13 @@
 		ABB02CC32C85529F00E4890D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB02CC22C85529F00E4890D /* HomeViewController.swift */; };
 		ABB02CC92C85904D00E4890D /* HomeBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB02CC82C85904D00E4890D /* HomeBannerCollectionViewCell.swift */; };
 		ABB02CCB2C85B1C400E4890D /* HomeProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB02CCA2C85B1C400E4890D /* HomeProductCollectionViewCell.swift */; };
+		ABB42ACF2C8A6FCC0040AD21 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB42ACE2C8A6FCC0040AD21 /* Cart.storyboard */; };
+		ABB42AD12C8A702C0040AD21 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB42AD02C8A702C0040AD21 /* CartViewController.swift */; };
+		ABB42AD32C8A70520040AD21 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB42AD22C8A70520040AD21 /* CartViewModel.swift */; };
+		ABB42AD52C8A7C5B0040AD21 /* CartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB42AD42C8A7C5B0040AD21 /* CartResponse.swift */; };
+		ABB42AD72C8AA8FC0040AD21 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB42AD62C8AA8FC0040AD21 /* Product.swift */; };
+		ABB42ADA2C8ABF760040AD21 /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB42AD92C8ABF760040AD21 /* PurchaseButton.swift */; };
+		ABB42ADC2C8AC5990040AD21 /* CartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB42ADB2C8AC5990040AD21 /* CartItemTableViewCell.swift */; };
 		ABB80CE02C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB80CDF2C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift */; };
 		ABB80CE22C89993B0046543C /* HomeThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB80CE12C89993B0046543C /* HomeThemeCollectionViewCell.swift */; };
 		ABB80CE42C89B5610046543C /* HomeThemeHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB80CE32C89B5610046543C /* HomeThemeHeaderCollectionReusableView.swift */; };
@@ -61,6 +68,13 @@
 		ABB02CC22C85529F00E4890D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		ABB02CC82C85904D00E4890D /* HomeBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		ABB02CCA2C85B1C400E4890D /* HomeProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABB42ACE2C8A6FCC0040AD21 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
+		ABB42AD02C8A702C0040AD21 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		ABB42AD22C8A70520040AD21 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		ABB42AD42C8A7C5B0040AD21 /* CartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartResponse.swift; sourceTree = "<group>"; };
+		ABB42AD62C8AA8FC0040AD21 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		ABB42AD92C8ABF760040AD21 /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
+		ABB42ADB2C8AC5990040AD21 /* CartItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemTableViewCell.swift; sourceTree = "<group>"; };
 		ABB80CDF2C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSeparateLineCollectionViewCell.swift; sourceTree = "<group>"; };
 		ABB80CE12C89993B0046543C /* HomeThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		ABB80CE32C89B5610046543C /* HomeThemeHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThemeHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -119,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				ABA46C5D2C86D464004061C8 /* HomeResponse.swift */,
+				ABB42AD42C8A7C5B0040AD21 /* CartResponse.swift */,
+				ABB42AD62C8AA8FC0040AD21 /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,6 +152,7 @@
 			children = (
 				ABB02CC52C8573E100E4890D /* Splash */,
 				ABB02CC62C8573EC00E4890D /* Home */,
+				ABB42ACD2C8A6F5D0040AD21 /* Cart */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -168,6 +185,26 @@
 				AB5613A72C7C15F5002B6B4B /* SceneDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		ABB42ACD2C8A6F5D0040AD21 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				ABB42AD82C8ABC610040AD21 /* View */,
+				ABB42ACE2C8A6FCC0040AD21 /* Cart.storyboard */,
+				ABB42AD02C8A702C0040AD21 /* CartViewController.swift */,
+				ABB42AD22C8A70520040AD21 /* CartViewModel.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		ABB42AD82C8ABC610040AD21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABB42AD92C8ABF760040AD21 /* PurchaseButton.swift */,
+				ABB42ADB2C8AC5990040AD21 /* CartItemTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		ABC7744A2C8682B90060C693 /* View */ = {
@@ -271,6 +308,7 @@
 				AB5613AF2C7C15F6002B6B4B /* Assets.xcassets in Resources */,
 				ABB02CC12C85520C00E4890D /* Home.storyboard in Resources */,
 				AB6D62FB2C844CB400D22A6F /* Images.xcassets in Resources */,
+				ABB42ACF2C8A6FCC0040AD21 /* Cart.storyboard in Resources */,
 				AB5613B22C7C15F6002B6B4B /* Base in Resources */,
 				ABC890422C805A7C008A90BE /* GoogleService-Info.plist in Resources */,
 				AB5613BE2C7C1724002B6B4B /* README.md in Resources */,
@@ -291,20 +329,26 @@
 				ABC7744D2C869A710060C693 /* NetworkService.swift in Sources */,
 				ABA7E4502C87EB500018F263 /* Numeric+Extensions.swift in Sources */,
 				ABCADCEA2C7DB21500B0318F /* SFont.swift in Sources */,
+				ABB42AD32C8A70520040AD21 /* CartViewModel.swift in Sources */,
 				ABB02CCB2C85B1C400E4890D /* HomeProductCollectionViewCell.swift in Sources */,
 				AB5613A62C7C15F5002B6B4B /* AppDelegate.swift in Sources */,
 				ABB80CE42C89B5610046543C /* HomeThemeHeaderCollectionReusableView.swift in Sources */,
 				ABA325912C8827890034855A /* HomeCouponButtonCollectionViewCell.swift in Sources */,
 				ABB02CC32C85529F00E4890D /* HomeViewController.swift in Sources */,
+				ABB42ADC2C8AC5990040AD21 /* CartItemTableViewCell.swift in Sources */,
 				AB6D62F92C844C2E00D22A6F /* SColor.swift in Sources */,
+				ABB42ADA2C8ABF760040AD21 /* PurchaseButton.swift in Sources */,
 				AB5613A82C7C15F5002B6B4B /* SceneDelegate.swift in Sources */,
 				ABA46C642C87057C004061C8 /* HomeViewModel.swift in Sources */,
 				ABAD8F132C7C594C00BE993A /* SplashViewController.swift in Sources */,
 				AB6D62FD2C845E6C00D22A6F /* SImage.swift in Sources */,
+				ABB42AD52C8A7C5B0040AD21 /* CartResponse.swift in Sources */,
 				ABB02CC92C85904D00E4890D /* HomeBannerCollectionViewCell.swift in Sources */,
 				ABB80CE22C89993B0046543C /* HomeThemeCollectionViewCell.swift in Sources */,
 				ABB80CE02C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift in Sources */,
+				ABB42AD12C8A702C0040AD21 /* CartViewController.swift in Sources */,
 				ABA46C5E2C86D464004061C8 /* HomeResponse.swift in Sources */,
+				ABB42AD72C8AA8FC0040AD21 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

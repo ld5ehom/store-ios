@@ -61,6 +61,16 @@ class NetworkService {
         }
     }
     
-    
+    //cart api
+    func getCartData() async throws -> CartResponse {
+        let url = try createURL(withPath: "/cart.json")
+        let data = try await fetchData(from: url)
+        do {
+            let decodeData = try JSONDecoder().decode(CartResponse.self, from: data)
+            return decodeData
+        } catch {
+            throw NetworkError.decodeError
+        }
+    }
 }
 

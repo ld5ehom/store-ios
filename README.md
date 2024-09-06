@@ -68,14 +68,18 @@
      - **Coupon Button: UI and View Model Integration** - [commit cd85831](https://github.com/ld5ehom/store-ios/commit/cd85831de9c2a110e66766d55993607c4dc6f911) :    
        - Added UI and related functionality for the coupon button, allowing its enabled/disabled state to dynamically change based on the view model.
        - Improved code modularity by separating logic not directly tied to the MVI lifecycle into extensions.
-     - **Horizontal Theme and Product Recommendation Carousel on Home Screen**
-       - Implemented a basic horizontal theme image carousel using Kingfisher, along with a "Deals for You" title at the bottom and an additional theme carousel for product recommendations.
+     - **Horizontal Theme and Product Recommendation Carousel on Home Screen** - [commit 364973e](https://github.com/ld5ehom/store-ios/commit/364973e944dbf21861aae51ec24889dcde4bd6dc) : 
+       - Implemented a basic horizontal theme image carousel using Kingfisher, along with a 'Deals for You' title at the bottom and an additional theme carousel for product recommendations.
 
 
 
 **Task 4. Cart Page**
+   - **Issues** : [task-4-cart](https://github.com/ld5ehom/store-ios/tree/task-4-cart)
    - **Details** : 
-     - Create and implement the cart page to manage items, including add, remove, and update functionalities, integrated with backend synchronization.
+     - **Cart Page Implementation** 
+       - Navigation: Implemented navigation to the cart page using a navigation bar at the top of the screen.
+       - TableView Integration: Developed the cart page using UITableView and DiffableDataSource for efficient display and management of cart items.
+       - Network Service Update: Updated the network service to include API calls for fetching and displaying cart data.
 
 
 **Task 5. Product Information Page**
