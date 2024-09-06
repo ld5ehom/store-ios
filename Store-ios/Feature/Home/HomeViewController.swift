@@ -236,6 +236,18 @@ final class HomeViewController: UIViewController {
         cell.setViewModel(viewModel)
         return cell
     }
+    
+    //cart button
+    @IBAction func cartButtonAction(_ sender: Any) {
+        // Cart Storyboard
+        let cartStoryboard: UIStoryboard = UIStoryboard(name: "Cart", bundle: nil)
+        
+        // Cart View Controller
+        if let cartViewController = cartStoryboard.instantiateInitialViewController() {
+            navigationController?.pushViewController(cartViewController, animated: true)
+        }
+    }
+    
 }
 
 // ctrl(command) + alt + enter  = preview on/off
