@@ -76,15 +76,24 @@
 **Task 4. Cart Page**
    - **Issues** : [task-4-cart](https://github.com/ld5ehom/store-ios/tree/task-4-cart)
    - **Details** : 
-     - **Cart Page Implementation** 
+     - **Cart Page Implementation** - [commit 184bbcb](https://github.com/ld5ehom/store-ios/commit/184bbcba677936974cd63f7f02e5d417ecd95ca0) : 
        - Navigation: Implemented navigation to the cart page using a navigation bar at the top of the screen.
        - TableView Integration: Developed the cart page using UITableView and DiffableDataSource for efficient display and management of cart items.
        - Network Service Update: Updated the network service to include API calls for fetching and displaying cart data.
 
 
-**Task 5. Product Information Page**
+**Task 5. Product Details Page**
+   - **Issues** : [task-5-details](https://github.com/ld5ehom/store-ios/tree/task-5-details)
    - **Details** : 
-     - Design the product detail view to show detailed information, images, and reviews, with functionality to add items to the cart.
+     - **SwiftUI and UIKit Integration for Product Details Page** 
+       - UIHostingController Integration: Connected SwiftUI and UIKit, allowing SwiftUI views to be used in a UIKit app.
+       - Layout Management: Controlled the layout using SwiftUI’s system while following UIKit’s layout rules when needed.
+       - Lifecycle Coordination: Synced UIKit’s lifecycle with SwiftUI’s state changes to ensure data and UI updates happen smoothly.
+       - Data Sharing: Used SwiftUI’s data tools (like ObservableObject) to share and sync data between SwiftUI and UIKit.
+       - Event Handling: Handled events between UIKit and SwiftUI using simple closures and custom protocols.
+       - Navigation: Combined UIKit’s UINavigationController and SwiftUI’s NavigationView for smooth navigation.
+       - SwiftUI Integration: Set up the main view with UIHostingController, letting the app use SwiftUI within a UIKit framework.
+ 
 
 
 **Task 6. Checkout Page**
