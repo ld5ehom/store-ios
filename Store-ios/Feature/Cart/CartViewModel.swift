@@ -24,6 +24,9 @@ final class CartViewModel {
     
     private(set) var state: State = State()
     
+    // cancel load data
+    private var loadDataTask: Task<Void, Never>?
+    
     // Action
     func process(_ action: Action) {
         switch action {
@@ -38,6 +41,11 @@ final class CartViewModel {
             break
         }
     }
+    
+    deinit {
+        loadDataTask?.cancel()
+    }
+    
 }
 
 
@@ -45,7 +53,7 @@ extension CartViewModel {
     
     // API
     private func getCartFromAPI() {
-        Task {
+        loadDataTask = Task {
             do {
                 let response = try await NetworkService.shared.getCartData()
                 process(.getCartSuccess(response))

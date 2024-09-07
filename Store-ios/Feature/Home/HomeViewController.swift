@@ -54,6 +54,8 @@ final class HomeViewController: UIViewController {
         // API data
         collectionView.collectionViewLayout = compositionalLayout
         
+        collectionView.delegate = self
+        
         // HomeViewModel loadData
         viewModel.process(action: .loadData)
         
@@ -248,6 +250,25 @@ final class HomeViewController: UIViewController {
         }
     }
     
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch currentSection[indexPath.section] {
+        case .banner:
+            break
+        case .separateLine1, .separateLine2:
+            break
+        case .couponButton:
+            break
+        case .horizontalProductItem, .verticalProductItem:
+            let storyboard: UIStoryboard = UIStoryboard(name: "Details", bundle: nil)
+            guard let viewController: UIViewController = storyboard.instantiateInitialViewController() else { return }
+            navigationController?.pushViewController(viewController, animated: true)
+        case .theme:
+            break
+        }
+    }
 }
 
 // ctrl(command) + alt + enter  = preview on/off
