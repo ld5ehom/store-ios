@@ -52,6 +52,9 @@
 		ABC0BB672C8D0D1A000C91A5 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0BB662C8D0D1A000C91A5 /* OptionViewController.swift */; };
 		ABC0BB692C8D0D2F000C91A5 /* OptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0BB682C8D0D2F000C91A5 /* OptionViewModel.swift */; };
 		ABC0BB6B2C8D0D48000C91A5 /* OptionRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0BB6A2C8D0D48000C91A5 /* OptionRootView.swift */; };
+		ABC0BB6E2C8D416E000C91A5 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0BB6D2C8D416E000C91A5 /* CheckoutViewController.swift */; };
+		ABC0BB702C8D5219000C91A5 /* CheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0BB6F2C8D5219000C91A5 /* CheckoutViewModel.swift */; };
+		ABC0BB722C8D6CC0000C91A5 /* CheckoutSelectedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0BB712C8D6CC0000C91A5 /* CheckoutSelectedItemView.swift */; };
 		ABC7744D2C869A710060C693 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7744C2C869A710060C693 /* NetworkService.swift */; };
 		ABC890422C805A7C008A90BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABC890412C805A7C008A90BE /* GoogleService-Info.plist */; };
 		ABCADCEA2C7DB21500B0318F /* SFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCADCE92C7DB21500B0318F /* SFont.swift */; };
@@ -104,6 +107,9 @@
 		ABC0BB662C8D0D1A000C91A5 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		ABC0BB682C8D0D2F000C91A5 /* OptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewModel.swift; sourceTree = "<group>"; };
 		ABC0BB6A2C8D0D48000C91A5 /* OptionRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionRootView.swift; sourceTree = "<group>"; };
+		ABC0BB6D2C8D416E000C91A5 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		ABC0BB6F2C8D5219000C91A5 /* CheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewModel.swift; sourceTree = "<group>"; };
+		ABC0BB712C8D6CC0000C91A5 /* CheckoutSelectedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutSelectedItemView.swift; sourceTree = "<group>"; };
 		ABC7744C2C869A710060C693 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		ABC890412C805A7C008A90BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABCADCE92C7DB21500B0318F /* SFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFont.swift; sourceTree = "<group>"; };
@@ -274,6 +280,9 @@
 		ABC0BB6C2C8D2489000C91A5 /* Checkout */ = {
 			isa = PBXGroup;
 			children = (
+				ABC0BB6D2C8D416E000C91A5 /* CheckoutViewController.swift */,
+				ABC0BB6F2C8D5219000C91A5 /* CheckoutViewModel.swift */,
+				ABC0BB712C8D6CC0000C91A5 /* CheckoutSelectedItemView.swift */,
 			);
 			path = Checkout;
 			sourceTree = "<group>";
@@ -428,11 +437,14 @@
 				ABB80CE02C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift in Sources */,
 				ABB42AE62C8AF9BE0040AD21 /* ProductDetailsResponse.swift in Sources */,
 				ABB42AD12C8A702C0040AD21 /* CartViewController.swift in Sources */,
+				ABC0BB722C8D6CC0000C91A5 /* CheckoutSelectedItemView.swift in Sources */,
 				ABB42AE22C8AEFBD0040AD21 /* DetailsRootView.swift in Sources */,
 				ABC0BB692C8D0D2F000C91A5 /* OptionViewModel.swift in Sources */,
 				ABB68AC02C8C3E1800C7BD12 /* DetailsMoreView.swift in Sources */,
 				ABA46C5E2C86D464004061C8 /* HomeResponse.swift in Sources */,
 				ABB42AD72C8AA8FC0040AD21 /* Product.swift in Sources */,
+				ABC0BB702C8D5219000C91A5 /* CheckoutViewModel.swift in Sources */,
+				ABC0BB6E2C8D416E000C91A5 /* CheckoutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

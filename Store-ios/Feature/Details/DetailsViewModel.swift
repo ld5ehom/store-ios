@@ -44,6 +44,9 @@ final class DetailsViewModel: ObservableObject {
     
     // Option View controller
     private(set) var showOptionViewController: PassthroughSubject<Void, Never> = PassthroughSubject<Void, Never>()
+ 
+    // Checkout View controller
+    private(set) var showCheckoutViewController: PassthroughSubject<Void, Never> = PassthroughSubject<Void, Never>()
     
     // cancel load data
     private var loadDataTask: Task<Void, Never>?
@@ -70,7 +73,7 @@ final class DetailsViewModel: ObservableObject {
         case .didTapCart:
             Task { await toggleCart() }
         case .didTapPurchase:
-            break
+            showCheckoutViewController.send()
         }
     }
     

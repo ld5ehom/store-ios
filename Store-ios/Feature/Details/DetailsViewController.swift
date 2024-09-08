@@ -39,12 +39,22 @@ final class DetailsViewController: UIViewController {
     }
     
     private func bindViewModelAction() {
-        viewModel.showOptionViewController.receive(on: DispatchQueue.main).sink { [weak self] _ in
-            
-            let viewController = OptionViewController()
-            self?.navigationController?.pushViewController(viewController, animated: true)
+        viewModel.showOptionViewController
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                let viewController = OptionViewController()
+                self?.navigationController?.pushViewController(viewController, animated: true)
         }
         .store(in: &cancellables)
+        
+        viewModel.showCheckoutViewController
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                let viewController = CheckoutViewController()
+                self?.navigationController?.pushViewController(viewController, animated: true)
+        }
+        .store(in: &cancellables)
+        
     }
     
 }
