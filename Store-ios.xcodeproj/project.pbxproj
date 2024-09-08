@@ -11,7 +11,6 @@
 		AB5613A82C7C15F5002B6B4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5613A72C7C15F5002B6B4B /* SceneDelegate.swift */; };
 		AB5613AF2C7C15F6002B6B4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5613AE2C7C15F6002B6B4B /* Assets.xcassets */; };
 		AB5613B22C7C15F6002B6B4B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AB5613B12C7C15F6002B6B4B /* Base */; };
-		AB5613BC2C7C16CF002B6B4B /* Help.md in Resources */ = {isa = PBXBuildFile; fileRef = AB5613BB2C7C16CF002B6B4B /* Help.md */; };
 		AB5613BE2C7C1724002B6B4B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AB5613BD2C7C1724002B6B4B /* README.md */; };
 		AB6D62F92C844C2E00D22A6F /* SColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D62F82C844C2E00D22A6F /* SColor.swift */; };
 		AB6D62FB2C844CB400D22A6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6D62FA2C844CB400D22A6F /* Images.xcassets */; };
@@ -65,7 +64,6 @@
 		AB5613AE2C7C15F6002B6B4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB5613B12C7C15F6002B6B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB5613B32C7C15F6002B6B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB5613BB2C7C16CF002B6B4B /* Help.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Help.md; sourceTree = "<group>"; };
 		AB5613BD2C7C1724002B6B4B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AB6D62F82C844C2E00D22A6F /* SColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SColor.swift; sourceTree = "<group>"; };
 		AB6D62FA2C844CB400D22A6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 			children = (
 				ABAD8F0E2C7C4EA400BE993A /* .gitignore */,
 				AB5613BD2C7C1724002B6B4B /* README.md */,
-				AB5613BB2C7C16CF002B6B4B /* Help.md */,
 				AB5613A42C7C15F5002B6B4B /* Store-ios */,
 				AB5613A32C7C15F5002B6B4B /* Products */,
 			);
@@ -381,7 +378,6 @@
 				ABB68AC42C8C61AD00C7BD12 /* Details.storyboard in Resources */,
 				ABAD8F0F2C7C4EA400BE993A /* .gitignore in Resources */,
 				ABAD8F152C7C697200BE993A /* Colors.xcassets in Resources */,
-				AB5613BC2C7C16CF002B6B4B /* Help.md in Resources */,
 				ABAD8F112C7C58D100BE993A /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
