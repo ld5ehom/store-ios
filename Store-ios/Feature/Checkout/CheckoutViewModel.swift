@@ -35,7 +35,7 @@ extension CheckoutViewModel {
     @MainActor
     private func loadData() async {
         // example (+ 2 second)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
             self?.state.checkoutItems = [
                 CheckoutSelectedItemViewModel(title: "UCLA T-Shirts1", description: "Free Shipping"),
                 CheckoutSelectedItemViewModel(title: "UCLA T-Shirts2", description: "Free Shipping"),
