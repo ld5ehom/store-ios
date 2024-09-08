@@ -176,6 +176,7 @@
 		ABB02CC42C8573D600E4890D /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				ABC0BB6C2C8D2489000C91A5 /* Checkout */,
 				ABB02CC52C8573E100E4890D /* Splash */,
 				ABB02CC62C8573EC00E4890D /* Home */,
 				ABB42ADD2C8AEAD20040AD21 /* Details */,
@@ -268,6 +269,13 @@
 				ABC0BB6A2C8D0D48000C91A5 /* OptionRootView.swift */,
 			);
 			path = Option;
+			sourceTree = "<group>";
+		};
+		ABC0BB6C2C8D2489000C91A5 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Checkout;
 			sourceTree = "<group>";
 		};
 		ABC7744A2C8682B90060C693 /* View */ = {
