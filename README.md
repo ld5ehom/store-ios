@@ -97,12 +97,13 @@
        - UIHostingController Integration: Connected SwiftUI and UIKit, allowing SwiftUI views to be used in a UIKit app.
 
 
-
 **Task 6. Checkout Page**
    - **Issues** : [task-6-checkout](https://github.com/ld5ehom/store-ios/tree/task-6-checkout)
    - **Details** : 
      - **Checkout Page UI** - [commit fbec0e7](https://github.com/ld5ehom/store-ios/commit/fbec0e7f83174ac5a47c087bc784a279fa34203c) : 
        - Implemented the checkout page UI using a scroll view to handle large content and ensure a smooth user experience.
+     - **View Code Separation and Refactoring** 
+       - Separated the view code from the view controller by moving UI-related code into a dedicated CheckoutRootView. This approach avoids using storyboards and organizes the UI elements into a SwiftUI view for cleaner code management.
 
 
 ### M2: AWS Backend Server Development
@@ -154,7 +155,7 @@
        - Separating `toggleLoading` as a MainActor to asynchronously update the UI state. 
      - **DetailsRateView Error Fix** - [commit e924818](https://github.com/ld5ehom/store-ios/commit/e9248180e7aba9a0503604e0822a36765007d3c7) : 
        - Implemented safeguards to prevent viewModel.rate from exceeding its valid range. Adjustments were made to ensure that the rate value remains between 0 and 5, preventing out-of-range errors and ensuring safe handling within the defined limits.
-     - **Resolved checkout page layout issues and screen glitches**  
+     - **Resolved checkout page layout issues and screen glitches** - [commit c10e4c1](https://github.com/ld5ehom/store-ios/commit/c10e4c1b26b41dcc157d37747a65613c56058a7c) :  
        - Changed the background color to the system background color for consistency.
        - Updated the item stack view’s bottom anchor to be relative to 'checkoutButton.topAnchor' to address layout issues.
        - Adjusted button layout constraints to use the 'safeAreaLayoutGuide' of the superview to prevent clipping and ensure proper placement.
