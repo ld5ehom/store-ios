@@ -93,16 +93,17 @@
        - Event Handling: Handled events between UIKit and SwiftUI using simple closures and custom protocols.
        - Navigation: Combined UIKit’s UINavigationController and SwiftUI’s NavigationView for smooth navigation.
        - SwiftUI Integration: Set up the main view with UIHostingController, letting the app use SwiftUI within a UIKit framework.
-     - **main thread error** 
+     - **Main thread error** - [commit 3665353](https://github.com/ld5ehom/store-ios/commit/3665353d062c9b1cfa9679ff9922329565bbd9a1) : 
        - Separating `toggleLoading` as a MainActor to asynchronously update the UI state. 
-     - **Product Option Selection Screen** 
+     - **Product Option Selection Screen** - [commit 3665353](https://github.com/ld5ehom/store-ios/commit/3665353d062c9b1cfa9679ff9922329565bbd9a1) : 
        - UIHostingController Integration: Connected SwiftUI and UIKit, allowing SwiftUI views to be used in a UIKit app.
 
 
 
 **Task 6. Checkout Page**
+   - **Issues** : [task-6-checkout](https://github.com/ld5ehom/store-ios/tree/task-6-checkout)
    - **Details** : 
-     - Develop the checkout process, integrating payment gateways and providing order summary and confirmation features.
+
 
 
 ### M2: AWS Backend Server Development
@@ -150,8 +151,9 @@
 
 **Task 12. Comprehensive Testing and Debugging**
    - **Details** : 
-     - Conduct unit, integration, and user acceptance testing to ensure all functionalities work as expected and meet user requirements.
-     
+     - **DetailsRateView Error Fix** 
+       - Implemented safeguards to prevent viewModel.rate from exceeding its valid range. Adjustments were made to ensure that the rate value remains between 0 and 5, preventing out-of-range errors and ensuring safe handling within the defined limits.
+
      
      
 -----
