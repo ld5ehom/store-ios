@@ -75,7 +75,7 @@ class NetworkService {
     
     // ProductDetails API
     func getProductDetailsData() async throws -> ProductDetailsResponse {
-        let url = try createURL(withPath: "/details.json")
+        let url = try createURL(withPath: "/data.json")
         let data = try await fetchData(from: url)
         do {
             let decodeData = try JSONDecoder().decode(ProductDetailsResponse.self, from: data)
