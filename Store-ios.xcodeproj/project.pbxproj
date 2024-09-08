@@ -49,6 +49,7 @@
 		ABB80CE02C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB80CDF2C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift */; };
 		ABB80CE22C89993B0046543C /* HomeThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB80CE12C89993B0046543C /* HomeThemeCollectionViewCell.swift */; };
 		ABB80CE42C89B5610046543C /* HomeThemeHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB80CE32C89B5610046543C /* HomeThemeHeaderCollectionReusableView.swift */; };
+		ABBD95FE2C8E548300442916 /* CheckoutRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD95FD2C8E548300442916 /* CheckoutRootView.swift */; };
 		ABC0BB672C8D0D1A000C91A5 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0BB662C8D0D1A000C91A5 /* OptionViewController.swift */; };
 		ABC0BB692C8D0D2F000C91A5 /* OptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0BB682C8D0D2F000C91A5 /* OptionViewModel.swift */; };
 		ABC0BB6B2C8D0D48000C91A5 /* OptionRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0BB6A2C8D0D48000C91A5 /* OptionRootView.swift */; };
@@ -104,6 +105,7 @@
 		ABB80CDF2C8975A90046543C /* HomeSeparateLineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSeparateLineCollectionViewCell.swift; sourceTree = "<group>"; };
 		ABB80CE12C89993B0046543C /* HomeThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		ABB80CE32C89B5610046543C /* HomeThemeHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThemeHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		ABBD95FD2C8E548300442916 /* CheckoutRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutRootView.swift; sourceTree = "<group>"; };
 		ABC0BB662C8D0D1A000C91A5 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		ABC0BB682C8D0D2F000C91A5 /* OptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewModel.swift; sourceTree = "<group>"; };
 		ABC0BB6A2C8D0D48000C91A5 /* OptionRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionRootView.swift; sourceTree = "<group>"; };
@@ -267,6 +269,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		ABBD95FC2C8E544D00442916 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABBD95FD2C8E548300442916 /* CheckoutRootView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		ABC0BB652C8D0CF0000C91A5 /* Option */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +290,7 @@
 		ABC0BB6C2C8D2489000C91A5 /* Checkout */ = {
 			isa = PBXGroup;
 			children = (
+				ABBD95FC2C8E544D00442916 /* View */,
 				ABC0BB6D2C8D416E000C91A5 /* CheckoutViewController.swift */,
 				ABC0BB6F2C8D5219000C91A5 /* CheckoutViewModel.swift */,
 				ABC0BB712C8D6CC0000C91A5 /* CheckoutSelectedItemView.swift */,
@@ -420,6 +431,7 @@
 				ABB02CC32C85529F00E4890D /* HomeViewController.swift in Sources */,
 				ABB42ADC2C8AC5990040AD21 /* CartItemTableViewCell.swift in Sources */,
 				AB6D62F92C844C2E00D22A6F /* SColor.swift in Sources */,
+				ABBD95FE2C8E548300442916 /* CheckoutRootView.swift in Sources */,
 				ABB42ADA2C8ABF760040AD21 /* PurchaseButton.swift in Sources */,
 				ABB68ABE2C8BD7F100C7BD12 /* DetailsPriceView.swift in Sources */,
 				ABB68AC62C8C61D400C7BD12 /* DetailsViewController.swift in Sources */,
