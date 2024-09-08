@@ -18,8 +18,9 @@
 
 ## Milestones
 - M1 : App Basic Functionality Development
-- M2 : AWS Backend Server Development
-- M3 : Advanced Features and Testing
+- M2 : Advanced Features and Testing
+- M3 : AWS Backend Server Development
+
 
 -----
 
@@ -102,54 +103,16 @@
    - **Details** : 
      - **Checkout Page UI** - [commit fbec0e7](https://github.com/ld5ehom/store-ios/commit/fbec0e7f83174ac5a47c087bc784a279fa34203c) : 
        - Implemented the checkout page UI using a scroll view to handle large content and ensure a smooth user experience.
-     - **View Code Separation and Refactoring** 
+     - **View Code Separation and Refactoring** - [commit e9dbe01](https://github.com/ld5ehom/store-ios/commit/e9dbe01e27d2e8ece2cd3d807987b89d6d793091) : 
        - Separated the view code from the view controller by moving UI-related code into a dedicated CheckoutRootView. This approach avoids using storyboards and organizes the UI elements into a SwiftUI view for cleaner code management.
+     - **WKWebView Integration for Payment Processing**  
+       - Implemented a virtual checkout process using WebKit to interact with JavaScript.
+       - Configured custom HTTP headers, user agent strings, and cookies to support the web interaction.
+       - Set up a test button to simulate a payment action, though actual payment functionality is not included.
 
+### M2: Advanced Features and Testing
 
-### M2: AWS Backend Server Development
-
-**Task 7. Cognito-based Login and Logout Functionality**
-   - **Details**: 
-     - Implement user authentication and authorization using Amazon Cognito.
-     - Set up user pools and identity pools for handling user registration, login, and logout.
-     - Ensure secure access and manage user sessions effectively.
-
-
-
-**Task 8. Product Registration via S3**
-   - **Details**: 
-     - Use Amazon S3 to handle product image uploads and storage.
-     - Implement APIs to manage product information and associate images with products.
-     - Ensure proper permissions and access controls for the S3 bucket.
-
-
-**Task 9. Purchase History Functionality with DynamoDB**
-   - **Details**: 
-     - Use Amazon DynamoDB to store and retrieve purchase history data.
-     - Design a schema for tracking user transactions and purchase details.
-     - Implement APIs to fetch and manage purchase history data efficiently.
-
-
-
-**Task 10. Search Functionality using OpenSearch**
-   - **Details**: 
-     - Integrate Amazon OpenSearch (formerly Elasticsearch) for advanced search capabilities.
-     - Set up indexing and search queries to enable efficient product searches.
-     - Implement search filters and sorting features to enhance user experience.
-
-
-
-**Task 11. Migration from Firebase to AWS and Integration**
-   - **Details**:  
-     - Migrate data and user authentication from Firebase to AWS services (e.g., using Amazon Cognito for authentication).
-     - Update the app to interact with the new AWS backend APIs instead of Firebase.
-     - Test integration thoroughly to ensure that all functionalities work correctly with AWS.
-     - Adjust any app logic or data handling based on the new AWS setup.
-
-
-### M3: Advanced Features and Testing
-
-**Task 12. Comprehensive Testing and Debugging**
+**Task 7. Comprehensive Testing and Debugging**
    - **Details** : 
      - **Main thread error** - [commit 3665353](https://github.com/ld5ehom/store-ios/commit/3665353d062c9b1cfa9679ff9922329565bbd9a1) : 
        - Separating `toggleLoading` as a MainActor to asynchronously update the UI state. 
@@ -160,12 +123,54 @@
        - Updated the item stack view’s bottom anchor to be relative to 'checkoutButton.topAnchor' to address layout issues.
        - Adjusted button layout constraints to use the 'safeAreaLayoutGuide' of the superview to prevent clipping and ensure proper placement.
 
-     
+
+-----
+### M3: AWS Backend Server Development
+
+**Task 8. Cognito-based Login and Logout Functionality**
+   - **Details**: 
+     - Implement user authentication and authorization using Amazon Cognito.
+     - Set up user pools and identity pools for handling user registration, login, and logout.
+     - Ensure secure access and manage user sessions effectively.
+
+
+
+**Task 9. Product Registration via S3**
+   - **Details**: 
+     - Use Amazon S3 to handle product image uploads and storage.
+     - Implement APIs to manage product information and associate images with products.
+     - Ensure proper permissions and access controls for the S3 bucket.
+
+
+**Task 10. Purchase History Functionality with DynamoDB**
+   - **Details**: 
+     - Use Amazon DynamoDB to store and retrieve purchase history data.
+     - Design a schema for tracking user transactions and purchase details.
+     - Implement APIs to fetch and manage purchase history data efficiently.
+
+
+
+**Task 11. Search Functionality using OpenSearch**
+   - **Details**: 
+     - Integrate Amazon OpenSearch (formerly Elasticsearch) for advanced search capabilities.
+     - Set up indexing and search queries to enable efficient product searches.
+     - Implement search filters and sorting features to enhance user experience.
+
+
+
+**Task 12. Migration from Firebase to AWS and Integration**
+   - **Details**:  
+     - Migrate data and user authentication from Firebase to AWS services (e.g., using Amazon Cognito for authentication).
+     - Update the app to interact with the new AWS backend APIs instead of Firebase.
+     - Test integration thoroughly to ensure that all functionalities work correctly with AWS.
+     - Adjust any app logic or data handling based on the new AWS setup.
+
+
      
 -----
 ## Progress Tracking
 
-- **Overall Progress** : Task 3 In Progress
+- **Overall Progress** : Task 7 In Progress
 
 
 -----
