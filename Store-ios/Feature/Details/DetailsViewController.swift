@@ -4,20 +4,25 @@
 //
 //  Created by TaeWook Park on 9/7/24.
 //
-
+import Combine
 import UIKit
 import SwiftUI
 
 final class DetailsViewController: UIViewController {
-
-    let viewModel: DetailsViewModel = DetailsViewModel()
     
+    let viewModel: DetailsViewModel = DetailsViewModel()
     lazy var rootView: UIHostingController = UIHostingController(rootView: DetailsRootView(viewModel: viewModel))
+    
+    // view controller life cycle
+    private var cancellables: Set<AnyCancellable> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         addRootView()
+        
+        //option view
+        bindViewModelAction()
     }
     
     private func addRootView() {
@@ -32,4 +37,14 @@ final class DetailsViewController: UIViewController {
             rootView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+    
+    private func bindViewModelAction() {
+        viewModel.showOptionViewController.receive(on: DispatchQueue.main).sink { [weak self] _ in
+            
+            let viewController = OptionViewController()
+            self?.navigationController?.pushViewController(viewController, animated: true)
+        }
+        .store(in: &cancellables)
+    }
+    
 }

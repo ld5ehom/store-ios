@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import Combine
 
 final class DetailsViewModel: ObservableObject {
     struct State {
+        var isError: String?
+        
         // loading
         var isLoading: Bool = false
         
@@ -39,6 +42,9 @@ final class DetailsViewModel: ObservableObject {
     
     @Published private(set) var state: State = State()
     
+    // Option View controller
+    private(set) var showOptionViewController: PassthroughSubject<Void, Never> = PassthroughSubject<Void, Never>()
+    
     // cancel load data
     private var loadDataTask: Task<Void, Never>?
     
@@ -54,17 +60,15 @@ final class DetailsViewModel: ObservableObject {
         case let .getDataSuccess(response):
             Task { await transformProductDetailsResponse(response)}
         case let .getDataFailure(error):
-            print(error)
+            Task { await getDataFailure(error) }
         case let .loading(isLoading):
-            state.isLoading = isLoading
+            Task { await toggleLoading(isLoading) }
         case .didTapChangeOption:
-            break
+            showOptionViewController.send()
         case .didTapMore:
-            needShowMore = false
-            state.more = needShowMore ? DetailsMoreViewModel() : nil
+            Task { await toggleMore() }
         case .didTapCart:
-            isCart.toggle()
-            state.purchase = DetailsPurchaseViewModel(isCart: isCart)
+            Task { await toggleCart() }
         case .didTapPurchase:
             break
         }
@@ -92,8 +96,31 @@ extension DetailsViewModel {
         }
     }
     
+    /**
+     Publishing changes from background threads is not allowed; make sure to publish values from the main thread (via operators like receive(on:)) on model updates.
+     -> Main thread error : Separating `toggleLoading','toggleCart' as a MainActor to asynchronously update the UI state.
+     */
+    @MainActor
+    private func toggleLoading(_ isLoading: Bool) async {
+        state.isLoading = isLoading
+    }
+    
+    @MainActor
+    private func toggleCart() async {
+        isCart.toggle()
+        state.purchase = DetailsPurchaseViewModel(isCart: isCart)
+    }
+    
+    @MainActor
+    private func toggleMore() async {
+        needShowMore = false
+        state.more = needShowMore ? DetailsMoreViewModel() : nil
+    }
+    
+    
     @MainActor
     private func transformProductDetailsResponse(_ response: ProductDetailsResponse) async {
+        state.isError = nil
         state.banners = DetailsBannerViewModel(imageUrls: response.bannerImages)
         state.rate = DetailsRateViewModel(rate: response.product.rate)
         state.title = response.product.name
@@ -107,6 +134,11 @@ extension DetailsViewModel {
         state.mainImageUrls = response.detailImages
         state.more = needShowMore ? DetailsMoreViewModel() : nil
         state.purchase = DetailsPurchaseViewModel(isCart: isCart)
+    }
+    
+    @MainActor
+    private func getDataFailure(_ error: Error) {
+        state.isError = "Error. \(error.localizedDescription)"
     }
     
 }

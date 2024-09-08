@@ -12,23 +12,31 @@ struct DetailsRootView: View {
     @ObservedObject var viewModel: DetailsViewModel
     
     var body: some View {
-        
         VStack(spacing: 0) {
-            ScrollView(.vertical) {
-                VStack(spacing: 0, content: {
-                    bannerView
-                    rateView
-                    titleView
-                    optionView
-                    priceView
-                    mainImageView
-                })
+            if viewModel.state.isLoading {
+                // loading screen
+                Text("Loading....")
+            } else {
+                if let error = viewModel.state.isError {
+                    Text(error)
+                } else {
+                    ScrollView(.vertical) {
+                        VStack(spacing: 0, content: {
+                            bannerView
+                            rateView
+                            titleView
+                            optionView
+                            priceView
+                            mainImageView
+                        })
+                    }
+                    // see more
+                    moreView
+                    
+                    // add cart and purchase
+                    purchaseView
+                }
             }
-            // see more
-            moreView
-            
-            // add cart and purchase
-            purchaseView
         }
         .onAppear(perform: {
             viewModel.process(.loadData)
