@@ -8,21 +8,21 @@
 import UIKit
 import SwiftUI
 
-enum SColor {
-
-}
+enum SColor { }
 
 extension SColor {
-    static var bk: UIColor = UIColor(resource: .bk)
-    static var wh: UIColor = UIColor(resource: .wh)
-    static var blue: UIColor = UIColor(resource: .uclaBlue)
-    static var gold: UIColor = UIColor(resource: .uclaGold)
-    static var lighterBlue: UIColor = UIColor(resource: .uclaLighterBlue)
-    static var lightestBlue: UIColor = UIColor(resource: .uclaLightestBlue)
-    static var darkerBlue: UIColor = UIColor(resource: .uclaDarkerBlue)
-    static var darkestBlue: UIColor = UIColor(resource: .uclaDarkestBlue)
-    static var darkerGold: UIColor = UIColor(resource: .uclaDarkerGold)
-    static var darketGold: UIColor = UIColor(resource: .uclaDarkestGold)
+    enum UIKit {
+        static var bk: UIColor = UIColor(named: "bk") ?? UIColor.black
+        static var wh: UIColor = UIColor(named: "wh") ?? UIColor.white
+        static var blue: UIColor = UIColor(named: "uclaBlue") ?? UIColor.systemBlue
+        static var gold: UIColor = UIColor(named: "uclaGold") ?? UIColor.systemYellow
+        static var lighterBlue: UIColor = UIColor(named: "uclaLighterBlue") ?? UIColor.systemTeal
+        static var lightestBlue: UIColor = UIColor(named: "uclaLightestBlue") ?? UIColor.gray
+        static var darkerBlue: UIColor = UIColor(named: "uclaDarkerBlue") ?? UIColor.systemIndigo
+        static var darkestBlue: UIColor = UIColor(named: "uclaDarkestBlue") ?? UIColor.blue
+        static var darkerGold: UIColor = UIColor(named: "uclaDarkerGold") ?? UIColor.orange
+        static var darketGold: UIColor = UIColor(named: "uclaDarkestGold") ?? UIColor.brown
+    }
 }
 
 extension SColor {
@@ -36,6 +36,6 @@ extension SColor {
         static var darkerBlue: Color = Color("uclaDarkerBlue", bundle: nil)
         static var darkestBlue: Color = Color("uclaDarkestBlue", bundle: nil)
         static var darkerGold: Color = Color("uclaDarkerGold", bundle: nil)
-        static var darketGold: Color = Color("uclaDarkestGold", bundle: nil)
+        static var darkestGold: Color = Color("uclaDarkestGold", bundle: nil)
     }
 }

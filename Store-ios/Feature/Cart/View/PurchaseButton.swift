@@ -23,8 +23,8 @@ final class PurchaseButton: UIButton {
     private func commonInit() {
         layer.cornerRadius = 5
         layer.borderWidth = 1
-        layer.borderColor = SColor.gold.cgColor
-        setTitleColor(SColor.blue , for: .normal)
+        layer.borderColor = SColor.UIKit.gold.cgColor
+        setTitleColor(SColor.UIKit.blue , for: .normal)
         setTitle("Buy Now", for: .normal)
         
     }
