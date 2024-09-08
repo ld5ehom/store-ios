@@ -65,6 +65,7 @@ final class CheckoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .systemBackground
         addSubViews()
         bindViewModel()
         viewModel.process(.loadData)
@@ -78,13 +79,14 @@ final class CheckoutViewController: UIViewController {
                 scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
                 scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
                 scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-                scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+                scrollView.bottomAnchor.constraint(equalTo: checkoutButton.topAnchor),
                 
                 // container view constraint
                 containerView.topAnchor.constraint(equalTo: scrollView.topAnchor),
                 containerView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
                 containerView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-                containerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+                containerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+                containerView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
             ]
             
             NSLayoutConstraint.activate(constraints)
@@ -115,11 +117,11 @@ final class CheckoutViewController: UIViewController {
         }
         
         // buy button
-        if checkoutButtonConstraints == nil, let superView = checkoutButton.superview {
+        if checkoutButtonConstraints == nil {
             let constraints = [
-                checkoutButton.leadingAnchor.constraint(equalTo: superView.leadingAnchor, constant: 20),
-                checkoutButton.trailingAnchor.constraint(equalTo: superView.trailingAnchor, constant: -20),
-                checkoutButton.bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: -40),
+                checkoutButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+                checkoutButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+                checkoutButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40),
                 checkoutButton.heightAnchor.constraint(equalToConstant: 50)
             ]
             NSLayoutConstraint.activate(constraints)
