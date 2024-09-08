@@ -20,6 +20,9 @@ final class CheckoutViewModel: ObservableObject {
     
     @Published private(set) var state: State = State()
     
+    // Payment View controller
+    private(set) var showPaymentViewController: PassthroughSubject<Void, Never> = PassthroughSubject<Void, Never>()
+    
     func process(_ action: Action) {
         switch action {
         case .loadData:
@@ -50,6 +53,7 @@ extension CheckoutViewModel {
     
     @MainActor
     private func didTapCheckoutButton() async {
-        // purchase (checkout button)
+        // Payment (checkout button)
+        showPaymentViewController.send()
     }
 }

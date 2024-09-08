@@ -36,6 +36,15 @@ final class CheckoutViewController: UIViewController {
             // Store the cancellable in the set to manage the lifecycle of the subscription
             .store(in: &cancellables)
         
+        // payment view controller - WKWebView
+        viewModel.showPaymentViewController
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                let paymentViewController: PaymentViewController = PaymentViewController()
+                self?.navigationController?.pushViewController(paymentViewController, animated: true)
+            }
+            .store(in: &cancellables)
+        
     }
 }
 
