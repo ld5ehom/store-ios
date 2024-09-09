@@ -1,11 +1,12 @@
 # Store iOS App
 
 ## Project Overview - iOS
-- Developed a store app for iOS, implementing user authentication with Firebase, including secure login and registration functionalities.
-- Separated views from view controllers by avoiding Storyboards, using programmatic UI layout.
-- Integrated WKWebView for the checkout screen, enabling web-based payment processing. 
-- Automated builds using Xcode Cloud for CI/CD, and utilized Fastlane for build automation and GitHub Actions for build verification and testing.
-- Utilized: Swift, UIKit, MVVM, MVI
+- Implemented compositional layout to create complex, scrollable collection view layouts efficiently, and utilized diffable data source to handle data changes and updates seamlessly, improving the performance and management of collection view items.
+- Applied the MVVM pattern to separate business logic from UI code, enhancing code maintainability and readability, and used the MVI pattern to handle state management and asynchronous actions, making the code structure clearer and more testable.
+- Integrated the Kingfisher library for efficient image loading and caching, which reduces redundant network requests and improves the app's performance by managing image data and caching it effectively.
+- Utilized SwiftUI’s UIHostingController to integrate SwiftUI views into a UIKit-based application, enabling the use of modern SwiftUI components while maintaining compatibility with existing UIKit elements and workflows.
+- Refactored the NetworkService to enhance its reusability and scalability by separating the host URL and creating a flexible URL generation function, which facilitates the easy addition of new APIs and reduces code duplication across the application.
+- Utilized: Swift, UIKit, MVVM, MVI, Combine, WKWebView 
 
 
 ## Project Overview - [Store Management System (AWS) for Store iOS App](https://github.com/ld5ehom/store)
@@ -105,7 +106,7 @@
        - Implemented the checkout page UI using a scroll view to handle large content and ensure a smooth user experience.
      - **View Code Separation and Refactoring** - [commit e9dbe01](https://github.com/ld5ehom/store-ios/commit/e9dbe01e27d2e8ece2cd3d807987b89d6d793091) : 
        - Separated the view code from the view controller by moving UI-related code into a dedicated CheckoutRootView. This approach avoids using storyboards and organizes the UI elements into a SwiftUI view for cleaner code management.
-     - **WKWebView Integration for Payment Processing**  
+     - **WKWebView Integration for Payment Processing** - [commit 5f0168d](https://github.com/ld5ehom/store-ios/commit/5f0168d1ed3f9d4473bbc5d48dda92215281efa9) :  
        - Implemented a virtual checkout process using WebKit to interact with JavaScript.
        - Configured custom HTTP headers, user agent strings, and cookies to support the web interaction.
        - Set up a test button to simulate a payment action, though actual payment functionality is not included.
@@ -122,6 +123,7 @@
        - Changed the background color to the system background color for consistency.
        - Updated the item stack view’s bottom anchor to be relative to 'checkoutButton.topAnchor' to address layout issues.
        - Adjusted button layout constraints to use the 'safeAreaLayoutGuide' of the superview to prevent clipping and ensure proper placement.
+
 
 
 -----
@@ -178,6 +180,7 @@
 - Firebase Structure Data : https://firebase.google.com/docs/database/ios/structure-data?hl=en
 - Firebase Database Reference : https://firebase.google.com/docs/database/ios/lists-of-data?hl=en
 - Kingfisher Library : https://github.com/onevcat/Kingfisher.git
+- fastlane : https://docs.fastlane.tools/
 - AWS Corretto: https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html
 - Spring initializr : https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.2.2&packaging=jar&jvmVersion=17&groupId=com.store&artifactId=backend&name=backend&description=TaeWook%20store%20project&packageName=com.store.backend&dependencies=lombok,web
 - Terraform : developer.hashicorp.com/terraform
@@ -201,6 +204,11 @@ git clone https://github.com/ld5ehom/store-ios.git
 **CocoaPods**:
 ```
 pod install
+```
+
+**fastlane**:
+```
+brew install fastlane
 ```
 
 **AWS Amplify**:
@@ -239,6 +247,12 @@ terraform -help
 -----
 ### Setup
 
+**fastlane**:
+```
+fastlane init
+```
+
+
 **InteliJ Plugin_Marketplace**
 - Lombok
 - AWS Toolkit
@@ -249,3 +263,8 @@ terraform -help
 
 -----
 ### Start
+
+**fastlane**:
+```
+fastlane increment_build
+```
